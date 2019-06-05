@@ -1,5 +1,10 @@
 @import './base';
 
+@mixin x1400-block(){
+  @media screen and (max-width: 1400px){
+      @content;
+  }
+}
 
 .page-wrapper {
   overflow: hidden;
@@ -9,32 +14,46 @@
   flex-direction: column;
 }
 
+.logo {
+  img {
+    display: block;
+  }
+}
+
 .site-description {
   font-family: $secondary_font;
-  font-size: 16px;
+  font-size: 84%;
   font-weight: normal;
   font-style: italic;
   max-width: 150px;
   color: rgb(44, 44, 44);
-  padding-left: 26px;
-  margin-left: 26px;
+  padding-left: 1.5625em;
+  margin-left: 1.5625em;
   border-left: 1px solid rgba(#000, 0.3);
+  @include xl-block() {
+    max-width: 120px;
+    padding-left: 0.8em;
+    margin-left: 0.8em;
+  }
+  
 }
 
 .phone-block {
   a {
-    font-size: 20px;
+    font-size: 100%;
     display: block;
-    @include xxl(font-size, 17px);
   }
 }
 
 .schedule {
-  font-size: 19px;
+  font-size: 100%;
   text-align: right;
-  padding-right: 26px;
+  padding-right: 1.32em;
   border-right: 1px solid rgba(#000, 0.3);
-  @include xxl(font-size, 16px);
+  @include xl(padding-right, 1em);
+  @include x1400-block() {
+    margin-left: auto;
+  }
 
   &__title {
     font-weight: 300;
@@ -51,15 +70,25 @@
   top: 0;
   width: 100%;
   z-index: 98;
+  font-size: 19px;
   background-color: #fff;
   border-bottom: 1px solid rgba(#000, .3);
+  @include xxl(font-size, 17px);
+  @include xl(font-size, 16px);
+  @include x1400-block() {
+    .hamburger {
+      display: block;
+    }
+    .phone-block {
+      display: none;
+    }
+  }
 
   &--scrolled {
   }
   
-  .container {
+  .container-full {
     max-width: 1820px;
-    @include xl(max-width, 1200px);
   }
 
   &__content {
@@ -68,8 +97,13 @@
     justify-content: space-between;
   }
 
-  .button, .phone-block {
-    margin-left: 26px;
+  .button {
+    margin-left: 1.5625em;
+    @include xl(margin-left, 1em);
+  }
+  .phone-block {
+    margin-left: 1.32em;
+    @include xl(margin-left, 0.8em);
   } 
 }
 
@@ -162,8 +196,8 @@
   }
 
   li {
-    margin-right: 28px;
-    @include xxl(font-size, 20px);
+    margin-right: 1.47em;
+    @include xl(margin-right, 1.1em);
     
     &.last {
       margin-right: 0 !important;
@@ -180,12 +214,42 @@
 
   a {
     display: inline-block;
-    // line-height: 1.5;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 89%;
     font-weight: bold;
-    @include xxl(font-size, 15px);
+  }
+
+  @include x1400-block() {
+    // display: none;
+    background-color: #fff;
+    position: fixed;
+    top: 79px;
+    left: 0;
+    right: 0;
+    text-align: right;
+    margin-left: 0;
+    z-index: 98;
+    padding: 10px 30px;
+
+		ul {
+			display: block;
+			height: auto;
+      padding: 0;
+      margin: 0;
+
+			li {
+        margin: 0 0 5px;
+
+        &:last-child {
+          margin: 0;
+        }
+			}
+    }
+    
+    .menu-phone {
+      display: block;
+    }
   }
 }
 

@@ -35,6 +35,11 @@ body {
   @include sm(max-width, 540px !important);
 }
 
+.container-full {
+  @include wrapper-full();
+  margin: 0 auto;
+}
+
 .row {
   @include row-flex();
 }
