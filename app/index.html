@@ -5,16 +5,16 @@
 
   <meta charset="utf-8">
 
-  <title>Главная страница</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Казахстанский  производитель  спецодежды</title>
+  <meta name="description" content="Казахстанский  производитель  спецодежды">
+  <meta name="keywords" content="Казахстанский  производитель  спецодежды">
 
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:image" content="path/to/image.jpg">
-  <link rel="shortcut icon" href="img/favicon.ico?v=1" type="image/x-icon">
+  <link rel="shortcut icon" href="img/favicon.ico?v=14" type="image/x-icon">
   <link rel="shortcut icon" href="img/favicon.png" type="image/png">
   <link rel="stylesheet" href="./css/libs.min.css">
   <link rel="stylesheet" href="./css/main.min.css">
@@ -42,22 +42,22 @@
             <div class="container">
               <ul>
                 <li>
-                  <a href="#main">Продукция</a>
+                  <a href="#production">Продукция</a>
                 </li>
                 <li>
-                  <a href="#service">Нанесение логотипа</a>
+                  <a href="#logotype">Нанесение логотипа</a>
                 </li>
                 <li>
                   <a href="#contact">Контакты</a>
                 </li>
                 <li class="last">
-                  <a href="#contact">Расчитать стоимость</a>
+                  <a href="#calculate">Расчитать стоимость</a>
                 </li>
                 <li class="menu-phone">
-                  <a href="tel:+" class="text-phone" id="phone_number">+ 7 (727) 317- 01-64</a>
+                  <a href="tel:+77273170164" class="text-phone" id="phone_number">+ 7 (727) 317- 01-64</a>
                 </li>
                 <li class="menu-phone">
-                  <a href="tel:+" class="text-phone" id="phone_number">+ 7 (778) 997-26-30</a>
+                  <a href="tel:+77789972630" class="text-phone" id="phone_number">+ 7 (778) 997-26-30</a>
                 </li>
               </ul>
             </div>
@@ -193,7 +193,7 @@
       </div>
     </section>
 
-    <section class="section s-calculate">
+    <section class="section s-calculate" id="calculate">
       <div class="container">
         <h2 class="section-title section-title--medium">
             <span>Рассчитайте стоимость пошива</span><br>
@@ -527,7 +527,7 @@
       </div>
     </section>
 
-    <section class="section s-quality">
+    <section class="section s-quality" id="logotype">
       <div class="container">
         <h2 class="section-title section-title--small">
             Вы гордитесь своим предприятием? <br>
@@ -776,7 +776,7 @@
       </div>
     </section>
 
-    <section class="s-contact">
+    <section class="s-contact" id="contact">
       <div class="container">
         <div class="map">
           <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A476fe9bd050a8e959757c02f4cd1dc055f8e43c49532c10dfc6a51eb2f3837a8&amp;width=100%25&amp;height=580&amp;lang=ru_RU&amp;scroll=true"></script>
@@ -826,7 +826,7 @@
             Поток клиентов для вашего бизнеса
           </div>
         </div>
-        <div class="footer__politika">Политика конфиденциальности</div>
+        <div class="footer__politika" data-remodal-target="politika">Политика конфиденциальности</div>
       </div>
     </footer>
   </div>
@@ -834,28 +834,52 @@
   <div class="remodal remodal--small" data-remodal-id="zvonok-modal" data-remodal-options="hashTracking: true">
     <button data-remodal-action="close" class="remodal-close"></button>
 
-    <div class="remodal__title">Оставьте заявку, <br>и наш консультант Вам перезвонит</div>
-
     <div class="form form--vertical">
       <form action="/mail.php" method="post">
+        <div class="form__title">Оставьте заявку, 
+            и <span>мы свяжемся с вами!</span></div>
         <div class="form__content">
           <input type="hidden" name="info" value="Обратный звонок">
 
           <div class="input-div">
-            <input type="text" class="input" name="name" placeholder="Имя">
+            <input type="text" class="input" name="name" placeholder="Ваше имя">
           </div>
 
           <div class="input-div">
-            <input type="tel" class="input" name="phone" placeholder="Номер телефона *" required minlength="10">
+            <input type="tel" class="input" name="phone" placeholder="Номер телефона" required minlength="10">
             <span class="error-message">Заполните это поле</span>
           </div>
 
-          <button class="button ajax-submit" type="submit" id="zakazat_zvonok">Заказать обратный звонок</button>
+          <div class="form__info">* Ваши данные в безопасности и не будут 
+              переданы третьим лицам</div>
 
-          <div class="form__info">*Гарантируем 100% сохранность Ваших данных</div>
+          <button class="button ajax-submit" type="submit" id="zakazat_zvonok">Заказать звонок</button>
         </div>
       </form>
     </div>
+  </div>
+
+  <div class="remodal politika" data-remodal-id="politika" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close"></button>
+
+    <div class="politika__title">Политика конфиденциальности</div>
+
+    <div class="politika__text">Соблюдение Вашей конфиденциальности важно для нашей компании. Поэтому мы разработали Политику Конфиденциальности, которая описывает, как используется и хранится Ваша информация. Пожалуйста, ознакомьтесь и сообщите нам, если у Вас возникнут какие-либо вопросы.</div>
+    <div class="politika__text"><span>Сбор и использование персональной информации</span><br>
+      Под персональной информацией понимаются данные, которые могут быть использованы для идентификации определенного лица либо связи с ним. От Вас может быть запрошено предоставление персональной информации в любой момент, когда Вы связываетесь с нами.</div>
+    <div class="politika__text"><span>Какую персональную информацию мы собираем</span><br>
+      огда Вы оставляете заявку на сайте, мы можем собирать различную информацию, включая Ваше имя, номер телефона, адрес электронной почты и т.д.</div>
+    <div class="politika__text"><span>Как мы используем Вашу персональную информацию</span><br>
+      Персональная информация позволяет нам сообщать об уникальных предложениях, акциях и других мероприятиях и ближайших событиях. Время от времени мы можем использовать Вашу персональную информацию для отправки важных уведомлений и сообщений. Мы также можем использовать персональную информацию для внутренних целей: проведения аудита, анализа данных и различных исследований в целях улучшения услуг. Если Вы принимаете участие в розыгрыше призов или конкурсе, мы можем использовать информацию для управления такими программами.</div>
+    <div class="politika__text"><span>Раскрытие информации третьим лицам</span><br>
+      Мы не раскрываем полученную от Вас информацию третьим лицам.</div>
+    <div class="politika__text"><span>Исключения</span><br>
+      В соответствии с законом, судебным порядком, в судебном разбирательстве и/или на основании публичных запросов или запросов от государственных органов на территории РК. Мы также можем раскрывать информацию о Вас, если мы определим, что такое раскрытие необходимо или уместно в целях безопасности, поддержания правопорядка или иных общественно важных случаях.
+      В случае реорганизации, слияния или продажи мы можем передать собираемую нами персональную информацию соответствующему третьему лицу – правопреемнику.</div>
+    <div class="politika__text"><span>Защита персональной информации</span><br>
+      Мы предпринимаем меры предосторожности, включая административные, технические и физические для защиты Вашей персональной информации от утраты, кражи и недобросовестного использования, а также от несанкционированного доступа, раскрытия, изменения и уничтожения.</div>
+    <div class="politika__text"><span>Соблюдение Вашей конфиденциальности на уровне компании</span><br>
+      Чтобы убедиться, что Ваша персональная информация находится в безопасности, мы доводим нормы соблюдения конфиденциальности и безопасности до наших сотрудников и строго следим за исполнением мер соблюдения конфиденциальности.  </div>    
   </div>
 
   <script src="./js/libs.min.js"></script>

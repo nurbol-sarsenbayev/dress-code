@@ -293,6 +293,7 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     text-align: left;
     color: red;
+    font-size: 14px;
     padding-left: 15px;
     margin-top: 5px;
 	}
@@ -564,7 +565,18 @@ h1, h2, h3, h4, h5, h6 {
 
   &--small {
     max-width: 400px;
-    padding: 60px 25px;
+    border-radius: 20px;
+    padding: 0;
+    .form {
+      padding: 45px 25px;
+      max-width: none !important;
+      &__title {
+        text-align: center;
+      }
+      &__content {
+        max-width: 300px;
+      }
+    }
   }
 }
 
