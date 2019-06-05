@@ -729,9 +729,33 @@
 }
 
 .s-calculate {
+
   .section-title {
     margin-bottom: 44px;
   }
+
+  .table {
+    display: table;
+    padding: 0 10px;
+    .thead {
+      display: table-header-group;
+    }
+    .tbody {
+      display: table-row-group;
+    }
+    .tr {
+      display: table-row;
+    }
+    .td, .th {
+      display: table-cell;
+      padding: 20px 20px;
+      vertical-align: middle;
+    }
+    .th {
+      font-weight: bold;
+    }
+  }
+
   &__subtitle {
     color: #969696;
     text-align: center;

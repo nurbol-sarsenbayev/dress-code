@@ -631,27 +631,27 @@ h1, h2, h3, h4, h5, h6 {
   }    
 }
 
-.table {
-  display: table;
-  padding: 0 10px;
-  .thead {
-    display: table-header-group;
-  }
-  .tbody {
-    display: table-row-group;
-  }
-  .tr {
-    display: table-row;
-  }
-  .td, .th {
-    display: table-cell;
-    padding: 20px 20px;
-    vertical-align: middle;
-  }
-  .th {
-    font-weight: bold;
-  }
-}
+// .table {
+//   display: table;
+//   padding: 0 10px;
+//   .thead {
+//     display: table-header-group;
+//   }
+//   .tbody {
+//     display: table-row-group;
+//   }
+//   .tr {
+//     display: table-row;
+//   }
+//   .td, .th {
+//     display: table-cell;
+//     padding: 20px 20px;
+//     vertical-align: middle;
+//   }
+//   .th {
+//     font-weight: bold;
+//   }
+// }
 
 .counter {
   display: flex;
