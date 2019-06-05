@@ -1,0 +1,15 @@
+@import "_mixins/font-face";
+
+@include font-face("Lora", "../fonts/Lora/Lora-Regular", normal);
+@include font-face("Lora", "../fonts/Lora/Lora-Italic", normal, italic);
+@include font-face("Lora", "../fonts/Lora/Lora-Bold", bold);
+@include font-face("Lora", "../fonts/Lora/Lora-BoldItalic", bold, italic);
+
+@include font-face("ProximaNova", "../fonts/Proxima Nova/ProximaNova-Light", 300);
+@include font-face("ProximaNova", "../fonts/Proxima Nova/ProximaNova-LightIt", 300, italic);
+@include font-face("ProximaNova", "../fonts/Proxima Nova/ProximaNova-Regular", normal);
+@include font-face("ProximaNova", "../fonts/Proxima Nova/ProximaNova-RegularIt", normal, italic);
+@include font-face("ProximaNova", "../fonts/Proxima Nova/ProximaNova-Bold", bold);
+@include font-face("ProximaNova", "../fonts/Proxima Nova/ProximaNova-BoldIt", bold, italic);
+@include font-face("ProximaNova", "../fonts/Proxima Nova/ProximaNova-Semibold", 600);
+@include font-face("ProximaNova", "../fonts/Proxima Nova/ProximaNova-SemiboldIt", 600, italic);
