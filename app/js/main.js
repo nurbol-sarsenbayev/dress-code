@@ -176,13 +176,13 @@ $(document).ready(function () {
   $(".carousel-logo").owlCarousel({
     loop: false,
     smartSpeed: 500,
-    margin: 30,
+    margin: 0,
     navText: ['', ''],
     responsive: {
       0: { items: 1, mouseDrag: false, dots: true, nav: false },
       576: { items: 2, mouseDrag: true, dots: false, nav: true },
-      768: { items: 3, mouseDrag: true, dots: false, nav: true },
-      992: { items: 4, mouseDrag: true, dots: false, nav: true },
+      992: { items: 3, mouseDrag: true, dots: false, nav: true },
+      1200: { items: 4, mouseDrag: true, dots: false, nav: true },
     },
   });
 

@@ -317,11 +317,11 @@
   background-position: center center;
 
   &-title {
-    font-size: 50px;
+    font-size: 5rem;
     font-weight: normal;
     font-family: $secondary_font;
     color: rgb(42, 42, 42);
-    margin: 0 auto 70px;
+    margin: 0 auto 1.2em;
     text-align: center;
     &--left {
       margin: 0 auto 70px 0;
@@ -332,19 +332,22 @@
       margin: 0 0 70px auto;
     }
     &--medium {
-      font-size: 40px;
+      font-size: 4rem;
     }
     &--small {
-      font-size: 35px;
+      font-size: 3.5rem;
     }
-    @include xl-block() {
-      margin-bottom: 40px;
-      font-size: 35px;
-    }
-    @include sm-block() {
-      margin-bottom: 30px;
-      font-size: 28px;
-    }
+    // @include lg-block() {
+    //   margin-bottom: 40px;
+    //   font-size: 35px;
+    //   &--small {
+    //     font-size: 28px;
+    //   }
+    // }
+    // @include sm-block() {
+    //   margin-bottom: 30px;
+    //   font-size: 28px;
+    // }
 
     span {
       color: #173683;
@@ -596,15 +599,21 @@
     max-width: 1655px;
   }
 
+  .row {
+    justify-content: center;
+  }
+
   .col {
     @include size(4);
+    @include size-md(6);
+    @include size-xs(12);
   }
   .quality {
     position: relative;
-    padding: 90px 0 0 130px;
-    @include xl-block () {
-      padding: 50px 0 0 80px;
-    }
+    padding: 9rem 0 0 13rem;
+    max-width: 400px;
+    margin: 0 auto 15px;
+
     &__num, &__title {
       font-family: $secondary_font;
       font-weight: bold;
@@ -616,40 +625,40 @@
       line-height: 1;
       top: 0;
       left: 0;
-      font-size: 140px;
+      font-size: 14rem;
       letter-spacing: -2px;
-      width: 160px;
+      width: 16rem;
       color: rgba($secondary, 0.18);
-      @include xl-block () {
-        font-size: 100px;
-        width: auto;
-      };
-      @include lg(font-size, 80px);
-      @include md(font-size, 50px);
       img {
         position: absolute;
-        top: calc(100% - 40px);
+        top: calc(100% - 4rem);
         left: 50%;
         transform: translate(-50%, 0);
       }
     }
     &__title {
-      font-size: 35px;
+      font-size: 3.5rem;
       color: $secondary;
-      @include xl-block () {
-        font-size: 30px;
-      };
     }
     &__text {
-      font-size: 22px;
-      @include xl-block () {
-        font-size: 18px;
+      font-size: 2.2rem;
+    }
+    @include lg-block() {
+      padding: 0;
+      &__num {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      &__title {
+        text-align: center;
       }
     }
   }
 
   .carousel-logo {
-    margin-top: 70px;
+    margin-top: 7rem;
     .owl-item {
       padding: 25px 25px 30px;
     }
@@ -893,7 +902,7 @@
 .s-calculate {
 
   .section-title {
-    margin-bottom: 44px;
+    margin-bottom: 1.1em;
   }
 
   .table {
@@ -921,7 +930,7 @@
   &__subtitle {
     color: #969696;
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 7rem;
   }
 
   .table-title {
@@ -932,20 +941,28 @@
   &__divider {
     width: 1px;
     height: 500px;
-    margin: auto 50px;
+    margin: auto 5rem;
     background-color: rgba(#000, 0.2);
+    @include lg(display, none);
   }
 
   &__content {
     border-radius: 43px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 5px 43px 0px rgba(0, 0, 0, 0.12);
-    width: 1471px;
+    max-width: 1471px;
+    width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 4rem 0;
+    @include lg-block() {
+      flex-direction: column;
+      &:before, &:after {
+        display: none;
+      }
+    }
     &::before {
       content: "";
       position: absolute;
@@ -967,7 +984,7 @@
 
     .form {
       width: 390px;
-      padding: 20px 30px;
+      padding: 2rem 3rem;
       &__content {
         max-width: 100%;
       }
