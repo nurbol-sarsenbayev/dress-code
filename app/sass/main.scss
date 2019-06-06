@@ -719,6 +719,10 @@
     max-width: 940px;
     width: 100%;
     margin-right: 180px;
+    @include xl-block() {
+      max-width: 800px;
+      margin-right: 50px;
+    };
   }
 
   .section-title {
@@ -737,6 +741,9 @@
     &__img {
       width: 213px;
       margin: 0 auto 14px;
+      @include xl-block () {
+        width: 150px;
+      }
       img {
         width: 100%;
         border-radius: 50%;
@@ -750,6 +757,9 @@
     &__name {
       font-size: 19px;
       text-align: center;
+      @include xl-block() {
+        font-size: 16px;
+      };
     }
     &__summary {
       font-size: 21px;
@@ -757,6 +767,9 @@
       font-weight: bold;
       font-style: italic;
       text-align: center;
+      @include xl-block() {
+        font-size: 18px;
+      };
     }
   }
 
@@ -808,7 +821,11 @@
 
   .video {
     border-radius: 20px;
+    overflow: hidden;
     // @include lg(text-align, center);
+    @include xl-block() {
+      max-width: 500px;
+    }
   }
 
   &__list {
@@ -823,7 +840,7 @@
       padding: 0 0 0 62px;
       margin-bottom: 45px;
       list-style: none;
-      @include xl(margin-bottom, 30px);
+      @include xl(margin-bottom, 25px);
       @include md(padding-left, 45px);
     }
     .circle-check {
@@ -834,7 +851,7 @@
       border-radius: 50%;
       width: 37px;
       height: 37px;
-      @include md-block() {
+      @include lg-block() {
         top: -4px;
         width: 30px;
         height: 30px;
