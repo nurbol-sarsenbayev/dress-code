@@ -15,8 +15,7 @@ var settings = {
           width: '1700px'
         },
         xl: {
-            width: '1536px',
-            // offset: '30px'
+          width: '1555px',
         },
         lg: {
             width: '1200px', /* -> @media (max-width: 1100px) */

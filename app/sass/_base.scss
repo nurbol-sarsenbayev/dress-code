@@ -23,21 +23,31 @@ body {
   font-family: $primary_font;
   overflow-x: auto;
   opacity: 1;
+  @include xl(font-size, 18px);
+  @include md(font-size, 16px);
 }
 
 .container {
   @include wrapper();
-  // box-sizing: content-box;
-  @include xxl(max-width, 1536px !important);
+  max-width: 1615px;
+  @include xxl(max-width, 1555px !important);
   @include xl(max-width, 1140px !important);
   @include lg(max-width, 960px !important);
   @include md(max-width, 720px !important);
   @include sm(max-width, 540px !important);
+  @include xs-block() {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .container-full {
   @include wrapper-full();
   margin: 0 auto;
+  @include xs-block() {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .row {
@@ -129,7 +139,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px;
 	line-height: 0;
   display: none;
-  margin-left: 20px;
+  margin-left: 15px;
 	    
   &-box {
     width: 30px;
