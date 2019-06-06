@@ -324,7 +324,6 @@
     margin: 0 auto 1.2em;
     text-align: center;
     @include sm(font-size, 4rem);
-    // @include xs(font-size, 3rem)
     &--left {
       margin: 0 auto 70px 0;
       text-align: left;
@@ -1127,10 +1126,6 @@
 .s-about {
   background-image: url("../img/about-back.jpg");
 
-  .container {
-    max-width: 1625px;
-  }
-
   &__content {
     display: flex;
     align-items: flex-start;
@@ -1142,7 +1137,7 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: bold;
     color: #173683;
     margin: 0 0 35px auto;
@@ -1151,10 +1146,10 @@
   }
 
   &__text {
-    font-size: 24px;
+    font-size: 2.4rem;
     max-width: 300px;
     text-align: right;
-    margin: 0 0 75px auto;
+    margin: 0 0 7.5rem auto;
   }
 
   .scheme {
@@ -1179,7 +1174,7 @@
       }
     }
     &__title {
-      font-size: 32px;
+      font-size: 3.2rem;
       font-weight: normal;
       font-style: italic;
       font-family: $secondary_font;
@@ -1188,7 +1183,7 @@
       max-width: 200px;
     }
     &__text {
-      font-size: 20px;
+      font-size: 2rem;
     }
     &-1 {
       top: 160px;
