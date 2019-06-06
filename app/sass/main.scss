@@ -371,10 +371,19 @@
   &-element {
     font-family: $primary_font;
     font-weight: bold;
-    // font-style: italic;
+    
     & > span:first-child {
       padding: 5px 10px;
       background-color: rgb(230, 230, 230) !important;
+      @include xl-block() {
+        padding: 3px 5px;
+      }
+    }
+  }
+  &-flipchart-card {
+    @include xl-block() {
+      font-size: 18px;
+      font-weight: 600;
     }
   }
 }
@@ -424,10 +433,24 @@
   border-radius: 20px;
   max-width: 640px;
   box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.14);
+  @include lg-block() {
+    max-width: 500px;
+    padding: 30px;
+  }
+  @include sm-block() {
+    padding: 25px 20px;
+  }
 
   &__title {
     font-size: 24px;
     margin-bottom: 35px;
+    @include lg-block() {
+      font-size: 18px;
+    }
+    @include sm-block() {
+      font-size: 17px;
+      margin-bottom: 25px;
+    }
     span {
       color: #173683;
       font-weight: bold;
@@ -438,11 +461,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include sm-block() {
+      display: block;
+    }
   }
 
   &__info {
     font-size: 19px;
     margin-bottom: 8px;
+    @include lg-block() {
+      font-size: 15px;
+    }
+    @include sm-block() {
+      text-align: center;
+    }
   }
 
   .button {
@@ -450,7 +482,15 @@
     max-width: 232px;
     width: 100%;
     padding: 20px 20px;
-    border-radius: 28px
+    border-radius: 28px;
+    @include lg-block() {
+      width: auto;
+      padding: 15px;
+    }
+    @include sm-block() {
+      margin: 20px auto 0;
+      display: block;
+    }
   }
 }
 
@@ -458,6 +498,16 @@
   padding: 220px 0 0 0;
   margin-bottom: 155px;
   background-image: url("../img/main-back.png");
+  @include xxl-block() {
+    margin-bottom: 100px;
+  }
+  @include lg-block() {
+    background-image: url("../img/main-back2.png");
+    padding: 180px 0 0 0;
+  }
+  @include sm-block() {
+    padding-top: 150px;
+  }
 
   .container {
     max-width: 1555px;
@@ -478,6 +528,13 @@
     color: #fff;
     max-width: 895px;
     margin-bottom: 55px;
+    @include xxl-block() {
+      font-size: 35px;
+      margin-bottom: 40px;
+    }
+    @include sm-block() {
+      font-size: 28px;
+    }
     span {
       font-weight: bold;
       font-style: italic;
@@ -490,11 +547,23 @@
     list-style: none;
     color: #fff;
     font-size: 23px;
+    @include xxl-block() {
+      font-size: 20px;
+    }
+    @include sm-block() {
+      font-size: 18px;
+    }
 
     li {
       margin-bottom: 50px;
       display: flex;
       align-items: center;
+      @include xxl-block() {
+        margin-bottom: 30px;
+      }
+      @include sm-block() {
+        margin-bottom: 15px;
+      }
     }
 
     &__icon {
@@ -506,6 +575,12 @@
       border-radius: 50%;
       box-shadow: 0px 7px 14px 0px rgba(238, 139, 88, 0.89);
       margin-right: 22px;
+      @include md-block() {
+        width: 45px;
+        height: 45px;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
       img {
         position: absolute;
         top: 50%;
@@ -517,6 +592,12 @@
 
   .calculate {
     margin: 0 auto -70px 155px;
+    @include xxl-block() {
+      margin: 50px auto -50px 80px;
+    }
+    @include md-block() {
+      margin: 50px auto -50px;
+    }
   }
 }
 
