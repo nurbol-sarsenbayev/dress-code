@@ -323,6 +323,8 @@
     color: rgb(42, 42, 42);
     margin: 0 auto 1.2em;
     text-align: center;
+    @include sm(font-size, 4rem);
+    // @include xs(font-size, 3rem)
     &--left {
       margin: 0 auto 70px 0;
       text-align: left;
@@ -333,27 +335,23 @@
     }
     &--medium {
       font-size: 4rem;
+      @include sm(font-size, 3rem);
     }
     &--small {
       font-size: 3.5rem;
+      @include sm(font-size, 2.5rem);
     }
-    // @include lg-block() {
-    //   margin-bottom: 40px;
-    //   font-size: 35px;
-    //   &--small {
-    //     font-size: 28px;
-    //   }
-    // }
-    // @include sm-block() {
-    //   margin-bottom: 30px;
-    //   font-size: 28px;
-    // }
 
-    span {
+    i {
       color: #173683;
       font-style: italic;
     }
-
+    span {
+      display: block;
+      @include xs-block() {
+        display: inline;
+      }
+    }
     .inverse & {
       color: #fff;
     }
@@ -1006,6 +1004,30 @@
     .th {
       font-weight: bold;
     }
+    @include xs-block() {
+      display: block;
+      max-width: 390px;
+      padding: 0;
+      .th {
+        &:nth-child(2), &:nth-child(3) {
+          display: none;
+        }        
+      }
+      .tr {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+      }
+      .td {
+        padding: 5px 10px;
+        &:nth-child(1) {
+          width: 100%;
+        }
+        &:nth-child(2), &:nth-child(3) {
+          width: 50%;
+        }
+      }
+    }
   }
 
   &__subtitle {
@@ -1040,9 +1062,16 @@
     padding: 4rem 0;
     @include lg-block() {
       flex-direction: column;
+      align-items: center;
+      max-width: 650px;
       &:before, &:after {
         display: none;
       }
+    }
+    @include sm-block() {
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
     }
     &::before {
       content: "";
@@ -1066,6 +1095,12 @@
     .form {
       width: 390px;
       padding: 2rem 3rem;
+      @include lg(margin-top, 15px);
+      @include xs-block() {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
       &__content {
         max-width: 100%;
       }
