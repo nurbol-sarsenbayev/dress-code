@@ -823,11 +823,12 @@
   padding: 200px 0 270px;
 
   .container {
-    max-width: 1655px;
+    max-width: 1715px;
   }
 
   &__content {
     display: flex;
+    align-items: flex-start;
   }
 
   &__text {
@@ -849,7 +850,7 @@
   .section-title {
     text-align: left;
     color: #fff;
-    span {
+    i {
       font-weight: bold;
       color: #fff;
     }
@@ -1130,10 +1131,33 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @include md-block() {
+      flex-direction: column;
+    }
+  }
+
+  &__scheme {
+    flex-grow: 1;
+  }
+
+  &__aside {
+    flex-shrink: 0;
+    margin-left: 30px;
+    @include md(margin, 30px auto 0);
   }
 
   &__list {
     display: none;
+    font-size: 2.5rem;
+    margin: -100px 0 0 0;
+    @include xl-block() {
+      display: block;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+    @include lg(margin-top, -70px);
+    @include xs(margin-top, -40px);
   }
 
   &__title {
@@ -1143,6 +1167,11 @@
     margin: 0 0 35px auto;
     max-width: 280px;
     text-align: right;
+    @include md-block() {
+      max-width: 370px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
 
   &__text {
@@ -1150,18 +1179,29 @@
     max-width: 300px;
     text-align: right;
     margin: 0 0 7.5rem auto;
+    @include md-block() {
+      max-width: 370px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
 
   .scheme {
     position: relative;
     max-width: 1140px;
     width: 100%;
+    @include xl(display, none);
+
     &__img {
       display: block;
       margin: 0 auto;
-    }
-    &__num {
-      display: none;
+      &--mobile {
+        display: none;
+        img {
+          display: block;
+        }
+        @include xl(display, block);
+      }
     }
     &__item {
       position: absolute;
@@ -1181,6 +1221,7 @@
       color: $secondary;
       margin-bottom: 21px;
       max-width: 200px;
+      @include xl(margin, 0);
     }
     &__text {
       font-size: 2rem;
@@ -1190,7 +1231,7 @@
       left: 70px;
     }
     &-2 {
-      top: 375px;
+      top: 360px;
       left: 0;
     }
     &-3 {
