@@ -399,7 +399,8 @@
 }
 
 .card {
-
+  max-width: 340px;
+  margin: 0 auto;
   &__image {
     position: relative;
     border-radius: 22px;
@@ -822,34 +823,39 @@
   background-image: url("../img/comand-back.png");
   padding: 200px 0 270px;
 
-  .container {
-    max-width: 1715px;
-  }
-
   &__content {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
+    @include lg-block() {
+      display: block;
+    }
   }
 
   &__text {
     font-size: 22px;
     color: #fff;
     margin-bottom: 75px;
+    @include xl(margin-bottom, 30px);
+    @include lg(text-align, center);
   }
 
   &__block {
     max-width: 940px;
     width: 100%;
-    margin-right: 180px;
     @include xl-block() {
-      max-width: 800px;
-      margin-right: 50px;
+      width: 710px;
     };
+    @include lg-block() {
+      width: 100%;
+      margin: 0 auto 40px;
+    }
   }
 
   .section-title {
     text-align: left;
     color: #fff;
+    @include lg(text-align, center);
     i {
       font-weight: bold;
       color: #fff;
@@ -896,8 +902,13 @@
   }
 
   .slick {
+    &-slider {
+      left: -50px;
+      @include lg(left, 0);
+    }
     &-track {
       padding: 100px 0 200px;
+      @include xl(padding, 70px 0 150px);
     }
   }
 
@@ -914,15 +925,8 @@
 
   }
 
-  .owl-carousel {
-    .owl {
-      &-nav {
-        margin-top: 45px;
-      }
-    }
-  }
-
   .form {
+    @include lg(margin, 0 auto);
     &::before {
       content: "";
       position: absolute;
@@ -944,7 +948,6 @@
   .video {
     border-radius: 20px;
     overflow: hidden;
-    // @include lg(text-align, center);
     @include xl-block() {
       max-width: 500px;
     }

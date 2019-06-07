@@ -372,9 +372,10 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;  
   background-color: rgba(#fff, .7);
   border-radius: 22px;
+  flex-shrink: 0;
     
   &__title {
-    font-size: 23px;
+    font-size: 2.4rem;
     font-family: $secondary_font;
     margin-bottom: 3.5rem;
     span {
@@ -386,6 +387,7 @@ h1, h2, h3, h4, h5, h6 {
   &__input {
     font-size: 19px;
     margin-bottom: 10px;
+    @include xs(font-size, 14px);
   }
 
   .input-div, .button, .form__info, .checkbox-container {
@@ -516,25 +518,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slick {
-  &-track {
-    display: flex;
-    align-items: center;
-  }
-  &-slide {
-    float: none;
-  }
-  &-nav {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-  }
-
+  // &-track {
+  //   display: flex;
+  //   align-items: center;
+  // }
+  // &-slide {
+  //   float: none;
+  // }
   &-arrow {
     position: absolute;
     bottom: 0;
     border-radius: 50%;
     width: 51px;
     height: 51px;    
+    cursor: pointer;
     background-image: -moz-linear-gradient( 129deg, rgb(247,188,58) 0%, rgb(255,229,154) 100%) !important;
     background-image: -webkit-linear-gradient( 129deg, rgb(247,188,58) 0%, rgb(255,229,154) 100%) !important;
     background-image: -ms-linear-gradient( 129deg, rgb(247,188,58) 0%, rgb(255,229,154) 100%) !important;
