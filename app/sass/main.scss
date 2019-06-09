@@ -1052,6 +1052,12 @@
     @include xl-block() {
       max-width: 500px;
     }
+    @include lg-block() {
+      margin: 0 auto;
+    }
+    img {
+      display: block;
+    }
   }
 
   &__list {
@@ -1166,12 +1172,18 @@
       @include lg(margin-top, 15px);
       @include xs-block() {
         width: 100%;
-        padding-left: 0;
-        padding-right: 0;
+        // padding-left: 0;
+        // padding-right: 0;
       }
       &__content {
         max-width: 100%;
       }
+    }
+  }
+
+  .form {
+    .button {
+      @include xl(font-size, 12px);
     }
   }
 
@@ -1189,8 +1201,12 @@
     }
   }
 
-  &__scheme {
+  &__main {
     flex-grow: 1;
+  }
+
+  &__scheme {
+    // flex-grow: 1;
   }
 
   &__aside {
@@ -1203,7 +1219,7 @@
     display: none;
     font-size: 2.5rem;
     margin: -100px 0 0 0;
-    @include xl-block() {
+    @include lg-block() {
       display: block;
       li {
         margin-bottom: 10px;
@@ -1217,13 +1233,16 @@
     font-size: 2.4rem;
     font-weight: bold;
     color: #173683;
-    margin: 0 0 35px auto;
+    margin: 45px 0 35px auto;
     max-width: 280px;
     text-align: right;
+    @include xl-block() {
+      margin: 30px 0 25px auto;
+    }
     @include md-block() {
-      max-width: 370px;
+      max-width: 350px;
       text-align: center;
-      margin-bottom: 15px;
+      margin: 0 auto 15px;
     }
   }
 
@@ -1231,11 +1250,14 @@
     font-size: 2.4rem;
     max-width: 300px;
     text-align: right;
-    margin: 0 0 7.5rem auto;
+    margin: 0 0 75px auto;
+    @include xl-block() {
+      margin-bottom: 40px;
+    }
     @include md-block() {
-      max-width: 370px;
+      max-width: 350px;
       text-align: center;
-      margin-bottom: 15px;
+      margin: 0 auto 20px;
     }
   }
 
@@ -1243,22 +1265,26 @@
     position: relative;
     max-width: 1140px;
     width: 100%;
-    @include xl(display, none);
+    @include lg(display, none);
 
     &__img {
       display: block;
       margin: 0 auto;
+      @include xl(max-width, 450px);
       &--mobile {
         display: none;
         img {
           display: block;
         }
-        @include xl(display, block);
+        @include lg(display, block);
       }
     }
     &__item {
       position: absolute;
       max-width: 270px;
+      @include xl-block() {
+        max-width: 210px;
+      }
       &--left {
         text-align: right;
         .scheme__title {
@@ -1267,7 +1293,7 @@
       }
     }
     &__title {
-      font-size: 3.2rem;
+      font-size: 32px;
       font-weight: normal;
       font-style: italic;
       font-family: $secondary_font;
@@ -1275,36 +1301,59 @@
       margin-bottom: 21px;
       max-width: 200px;
       @include xl-block() {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      @include lg-block() {
         margin: 0;
         max-width: 100%;
-        font-size: 2.8rem;
+        font-size: 20px;
       }
     }
     &__text {
-      font-size: 2rem;
+      font-size: 20px;
       @include xl-block() {
-        font-size: 2.5rem;
+        font-size: 16px;
       }
     }
     &-1 {
       top: 160px;
       left: 70px;
+      @include xl-block() {
+        top: 90px;
+        left: 10px;
+      }
     }
     &-2 {
       top: 360px;
       left: 0;
+      @include xl-block() {
+        top: 230px;
+        left: -20px;
+      }
     }
     &-3 {
       top: 620px;
       left: 230px;
+      @include xl-block() {
+        top: 430px;
+        left: 100px;
+      }
     }
     &-4 {
       top: 90px;
       right: 100px;
+      @include xl-block() {
+        top: 80px;
+        right: 20px;
+      }
     }
     &-5 {
       top: 420px;
       right: 0;
+      @include xl-block() {
+        top: 270px;        
+      }
     }
   }
 }
