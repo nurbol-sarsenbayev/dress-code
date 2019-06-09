@@ -1049,6 +1049,12 @@
     @include xl-block() {
       max-width: 500px;
     }
+    @include lg-block() {
+      margin: 0 auto;
+    }
+    img {
+      display: block;
+    }
   }
 
   &__list {
