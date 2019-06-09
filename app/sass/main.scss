@@ -112,7 +112,7 @@
 }
 
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   z-index: 98;
@@ -122,7 +122,12 @@
   @include xxl(font-size, 17px);
   @include x1450(font-size, 15px);
 
+  .home-page & {
+    position: fixed;
+  }
+
   &--scrolled {
+    position: fixed;
   }
   
   .container-full {
@@ -401,19 +406,11 @@
   }
 
   &-link {
-    // padding-top: 205px;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 25px;
     @include xl-block() {
-      // padding-top: 150px;
       margin-bottom: 20px;
-    }
-    @include lg-block() {
-      // padding-top: 120px;
-    }
-    @include sm-block() {
-      // padding-top: 80px;
     }
     img {
       margin: 0 10px;
