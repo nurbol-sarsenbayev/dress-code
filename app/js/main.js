@@ -91,6 +91,10 @@ $(document).ready(function () {
     $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
   });
 
+  $(".top").click(function () {
+    $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
+  });
+
   $('.advantage__text').each(function() {
     var $titleWidth = $(this).siblings('.advantage__title').width();
     $(this).css('margin-left', -$titleWidth / 2);

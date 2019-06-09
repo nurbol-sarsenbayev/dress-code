@@ -550,9 +550,80 @@
 }
 
 .calc {
+  border-radius: 43px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 5px 43px 0px rgba(0, 0, 0, 0.12);
+  max-width: 1471px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  padding: 4rem 0;
+  @include lg-block() {
+    flex-direction: column;
+    align-items: center;
+    max-width: 650px;
+    &:before, &:after {
+      display: none;
+    }
+  }
+  @include sm-block() {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/nitka.png");
+    width: 141px;
+    height: 124px;
+    left: -100px;
+    top: 60%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 231px;
+    height: 213px;
+    background-image: url("../img/bernette-35.png");
+    right: -130px;
+    top: -100px;
+  }
+
+  .form {
+    width: 390px;
+    padding: 2rem 3rem;
+    @include lg(margin-top, 15px);
+    @include xs-block() {
+      width: 100%;
+      // padding-left: 0;
+      // padding-right: 0;
+    }
+    &__content {
+      max-width: 100%;
+    }
+    .button {
+      @include xl(font-size, 12px);
+    }
+  }
+
+  &__divider {
+    width: 1px;
+    height: 500px;
+    margin: auto 5rem;
+    background-color: rgba(#000, 0.2);
+    @include lg(display, none);
+  }
+
   .table {
     display: table;
     padding: 0 10px;
+    &-title {
+      font-weight: bold;
+      margin-bottom: 20px;  
+    }
     .thead {
       display: table-header-group;
     }
@@ -762,7 +833,10 @@
 
 .s-production {
   background-image: url("../img/product-back.png");
-  padding: 210px 0 200px;
+  padding: 220px 0 220px;
+  @include xl-block() {
+    background-position: center right;
+  }
 
   .col {
     @include size(3);
@@ -783,7 +857,25 @@
 }
 
 .s-quality {
-  // background-image: url("../img/quality-back.png");
+  position: relative;
+  padding: 150px 0 230px;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/quality-back-top.png");
+    width: 1920px;
+    height: 215px;
+    top: -70px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/quality-back-bottom.png");
+    width: 1920px;
+    height: 310px;
+    bottom: 0;
+  }
 
   .container {
     max-width: 1655px;
@@ -1109,88 +1201,16 @@
     text-align: center;
     margin-bottom: 7rem;
   }
-
-  .table-title {
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  &__divider {
-    width: 1px;
-    height: 500px;
-    margin: auto 5rem;
-    background-color: rgba(#000, 0.2);
-    @include lg(display, none);
-  }
-
-  &__content {
-    border-radius: 43px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 5px 43px 0px rgba(0, 0, 0, 0.12);
-    max-width: 1471px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    margin: 0 auto;
-    padding: 4rem 0;
-    @include lg-block() {
-      flex-direction: column;
-      align-items: center;
-      max-width: 650px;
-      &:before, &:after {
-        display: none;
-      }
-    }
-    @include sm-block() {
-      border-radius: 0;
-      box-shadow: none;
-      padding: 0;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/nitka.png");
-      width: 141px;
-      height: 124px;
-      left: -100px;
-      top: 60%;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      width: 231px;
-      height: 213px;
-      background-image: url("../img/bernette-35.png");
-      right: -130px;
-      top: -100px;
-    }
-
-    .form {
-      width: 390px;
-      padding: 2rem 3rem;
-      @include lg(margin-top, 15px);
-      @include xs-block() {
-        width: 100%;
-        // padding-left: 0;
-        // padding-right: 0;
-      }
-      &__content {
-        max-width: 100%;
-      }
-    }
-  }
-
-  .form {
-    .button {
-      @include xl(font-size, 12px);
-    }
-  }
-
 }
 
 .s-about {
   background-image: url("../img/about-back.jpg");
+  padding: 50px 0;
+
+  .section-title {
+    margin-bottom: 10px;
+    font-size: 40px;
+  }
 
   &__content {
     display: flex;
@@ -1203,10 +1223,6 @@
 
   &__main {
     flex-grow: 1;
-  }
-
-  &__scheme {
-    // flex-grow: 1;
   }
 
   &__aside {
@@ -1233,7 +1249,7 @@
     font-size: 2.4rem;
     font-weight: bold;
     color: #173683;
-    margin: 45px 0 35px auto;
+    margin: 50px 0 35px auto;
     max-width: 280px;
     text-align: right;
     @include xl-block() {
@@ -1372,7 +1388,7 @@
   &__title {
     font-size: 24px;
     font-family: $secondary_font;
-    @include sm(font-size, 18px);
+    @include xl(font-size, 20px);
     span {
       font-style: italic;
       color: #183781;
@@ -1420,11 +1436,15 @@
       text-transform: uppercase;
       color: $secondary;
       margin-top: 35px;
+      @include xl-block() {
+        font-size: 14px;
+        margin-top: 20px;
+      }
       @include md(margin-top, 15px);
     }
     &__text {
       font-size: 20px;
-      @include sm(font-size, 16px);
+      @include xl(font-size, 16px);
     }
   }
 }
@@ -1808,6 +1828,32 @@
   &__text {
     font-size: 14px;
     margin-bottom: 10px;
+    span {
+      color: $secondary;
+    }
+  }
+}
+
+[data-remodal-id="calculate-modal"] {
+  padding: 0;
+  display: inline-block;
+  background-color: transparent;
+  max-width: none;
+  width: auto;
+  .remodal-close {
+    top: 10px;
+    right: 10px;
+    // width: 50px;
+    // height: 50px;
+    // &:before {
+    //   font-size: 50px;
+    // }
+  }
+  .calc {
+    padding: 40px;
+    &::before, &::after {
+      display: none;
+    }
   }
 }
 
