@@ -11,6 +11,7 @@
 
 html {
   font-size: 10px;
+  @include xxl(font-size, 9.3px);
   @include xl(font-size, 8.2px);
   @include md(font-size, 7.3px);
   @include sm(font-size, 6.36px);
@@ -253,10 +254,10 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   display: inline-block;
   text-decoration: none;
-  padding: 16px 20px;
+  padding: 1.6rem 2rem;
   font-size: 14px;
   font-weight: bold;
-  min-width: 190px;
+  min-width: 19rem;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
@@ -300,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
   font-family: $default_family, sans-serif;
-  padding: 17.5px 20px 17.5px 15px;   
+  padding: 1.75rem 2rem 1.75rem 1.5rem;   
 
   &.error {
     border-color: red;
@@ -316,7 +317,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
     color: red;
     font-size: 14px;
-    padding-left: 15px;
+    padding-left: 1.5rem;
     margin-top: 5px;
 	}
 
@@ -390,12 +391,12 @@ h1, h2, h3, h4, h5, h6 {
     @include xs(font-size, 14px);
   }
 
-  .input-div, .button, .form__info, .checkbox-container {
+  .input-div, .form__info, .checkbox-container {
     margin-bottom: 20px;
   }
 
   .button {
-    padding: 17.5px 20px;
+    padding: 1.75rem 2rem;
   }
 
   &__info {
