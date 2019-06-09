@@ -139,6 +139,36 @@ $(document).ready(function () {
     }
   });
 
+  $('.item-type input').change(function() {
+    var $this = $(this);
+    var $tr = $this.closest('.tr');
+    var isChecked = $this.prop('checked');
+    if (isChecked) {
+      $tr.find('.item-season').addClass('active');
+    } else {
+      $tr.find('.item-season').removeClass('active')
+         .find('[type=checkbox]').prop('checked', false);
+
+      $tr.find('.counter').removeClass('active')
+         .find('input').val(0);
+    }
+  });
+
+  $('.item-season input').change(function() {
+    var $this = $(this);
+    var $tr = $this.closest('.tr');
+    var index = $this.closest('.item-season').index() + 1;
+    var isChecked = $this.prop('checked');
+    if (isChecked) {
+      $tr.find('.counter:nth-child(' + index + ')').addClass('active');
+    } else {
+      $tr.find('.counter:nth-child(' + index + ')').removeClass('active')
+         .find('input').val(0);
+    }
+  });
+
+
+
   $(".ajax-submit").click(function (e) {
     var $form = $(this).closest('form');
     var $requireds = $form.find(':required');

@@ -611,7 +611,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 25px;
   }
 
-  &--has-image {
+  &.item-type {
     .checkbox {
       margin-right: 40px;
       &-label {
@@ -690,6 +690,7 @@ h1, h2, h3, h4, h5, h6 {
   &__minus, &__plus {
     text-align: center;
     cursor: pointer;
+    user-select: none;
     font-size: 23px;
     width: 22px;
     height: 22px;

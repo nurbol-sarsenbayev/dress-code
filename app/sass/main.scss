@@ -401,19 +401,19 @@
   }
 
   &-link {
-    padding-top: 205px;
+    // padding-top: 205px;
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 25px;
     @include xl-block() {
-      padding-top: 150px;
+      // padding-top: 150px;
       margin-bottom: 20px;
     }
     @include lg-block() {
-      padding-top: 120px;
+      // padding-top: 120px;
     }
     @include sm-block() {
-      padding-top: 80px;
+      // padding-top: 80px;
     }
     img {
       margin: 0 10px;
@@ -570,8 +570,11 @@
     .th {
       font-weight: bold;
     }
-    &-cell {
+    .item-season, .counter {
       height: 24px;
+      &:not(.active) > * {
+        display: none;
+      }
       &:not(:first-child) {
         margin-top: 5px;
       }  
