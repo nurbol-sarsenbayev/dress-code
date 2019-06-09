@@ -1193,17 +1193,18 @@
     position: relative;
     max-width: 1140px;
     width: 100%;
-    @include xl(display, none);
+    @include lg(display, none);
 
     &__img {
       display: block;
       margin: 0 auto;
+      @include xl(max-width, 400px);
       &--mobile {
         display: none;
         img {
           display: block;
         }
-        @include xl(display, block);
+        @include lg(display, block);
       }
     }
     &__item {
@@ -1224,7 +1225,7 @@
       color: $secondary;
       margin-bottom: 21px;
       max-width: 200px;
-      @include xl(margin, 0);
+      @include lg(margin, 0);
     }
     &__text {
       font-size: 2rem;

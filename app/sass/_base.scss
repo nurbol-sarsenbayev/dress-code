@@ -11,9 +11,9 @@
 
 html {
   font-size: 10px;
-  @include xl(font-size, 8.2px);
-  @include md(font-size, 7.3px);
-  @include sm(font-size, 6.36px);
+  @include xl(font-size, 8px);
+  @include md(font-size, 7px);
+  @include sm(font-size, 6px);
 }
 
 html, body {
@@ -385,8 +385,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &__input {
-    font-size: 19px;
-    margin-bottom: 10px;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
     @include xs(font-size, 14px);
   }
 
@@ -424,12 +424,14 @@ h1, h2, h3, h4, h5, h6 {
 
   &--vertical {
     max-width: 370px;
-    padding: 4rem 4.5rem;
+    padding: 3rem 3.5rem;
+    @include lg(max-width, 320px);
     
     .form {
       &__content {
         max-width: 277px;
         margin: 0 auto;    
+        @include lg(max-width, 230px);
       }
     }
 
