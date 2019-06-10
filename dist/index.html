@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
-<body id="main-page">
+<body class="home-page">
 
   <div class="page-wrapper">
 
@@ -111,10 +111,6 @@
           <li><span class="s-main-list__icon"><img src="./img/main-list-3.png" alt=""></span>Нанесение логотипа и пошив промо-продукции</li>
           <li><span class="s-main-list__icon"><img src="./img/main-list-4.png" alt=""></span>Доставка по Казахстану в течение 7 дней</li>
         </ul>
-
-        <!-- <div class="s-main__img">
-          <img src="./img/main-persons.png" alt="">
-        </div>        -->
         
         <div class="calculate">
           <div class="calculate__title"><span>Рассчитайте стоимость пошива</span> спецодежды 
@@ -136,7 +132,7 @@
 
     <section class="section s-advantage">
       <div class="container-full">
-        <h2 class="section-title">Наши <span>преимущества</span></h2>
+        <h2 class="section-title">Наши <i>преимущества</i></h2>
         <div class="row">
           <div class="col">
             <div class="advantage">
@@ -172,7 +168,7 @@
 
     <section class="section s-production" id="production">
       <div class="container">
-        <h2 class="section-title">Наша <span>продукция</span></h2>
+        <h2 class="section-title">Наша <i>продукция</i></h2>
         <div class="row">
           <div class="col">
             <div class="card">
@@ -205,176 +201,223 @@
     <section class="section s-calculate" id="calculate">
       <div class="container">
         <h2 class="section-title section-title--medium">
-            <span>Рассчитайте стоимость пошива</span><br>
-            спецодежды прямо сейчас и получите <br>
+            <i>Рассчитайте стоимость пошива</i>
+            <span>спецодежды прямо сейчас и получите</span> 
             дополнительную скидку в 10%
         </h2>
         <div class="s-calculate__subtitle">Заполните форму ниже, выбрав нужные детали</div>
         <form action="/mail.php" method="post">
           <input type="hidden" name="info" value="Рассчитайте стоимость пошива">
 
-          <div class="s-calculate__content">
-            <div class="calc">
-              <div class="table">
-                <div class="thead">
-                  <div class="tr">
-                    <div class="th">Вид спецодежды</div>
-                    <div class="th">Сезон</div>
-                    <div class="th">Количество</div>
+          <div class="calc">
+            <div class="table">
+              <div class="thead">
+                <div class="tr">
+                  <div class="th">Вид спецодежды</div>
+                  <div class="th">Сезон</div>
+                  <div class="th">Количество</div>
+                </div>
+              </div>
+              <div class="tbody">
+                <div class="tr">
+                  <div class="td">
+                    <label class="checkbox-container item-type">
+                      <div class="checkbox">
+                        <input type="checkbox" name="type[]" value="Костюмы">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label"><img src="./img/uniform.png" alt="">Костюмы</span>
+                    </label>
+                  </div>
+                  <div class="td">
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Зима">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Зима</span>
+                    </label>
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Лето">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Лето</span>
+                    </label>
+                  </div>
+                  <div class="td">
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
+                    </div>
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
+                    </div>
                   </div>
                 </div>
-                <div class="tbody">
-                  <div class="tr">
-                    <div class="td">
-                      <label class="checkbox-container checkbox-container--has-image">
-                        <div class="checkbox">
-                          <input type="checkbox" name="type[]" value="Костюмы">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label"><img src="./img/uniform.png" alt="">Костюмы</span>
-                      </label>
-                    </div>
-                    <div class="td">
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Зима">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Зима</span>
-                      </label>
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Лето">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Лето</span>
-                      </label>
-                    </div>
-                    <div class="td">
-                      <div class="counter">
-                        <div class="counter__minus">-</div>
-                        <input type="text" class="counter__value" value="0" />
-                        <div class="counter__plus">+</div>
+                <div class="tr">
+                  <div class="td">
+                    <label class="checkbox-container item-type">
+                      <div class="checkbox">
+                        <input type="checkbox" name="type[]" value="Полукомбинезоны">
+                        <span></span>
                       </div>
+                      <span class="checkbox-label"><img src="./img/overall.png" alt="">Полукомбинезоны</span>
+                    </label>
+                  </div>
+                  <div class="td">
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Зима">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Зима</span>
+                    </label>
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Лето">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Лето</span>
+                    </label>
+                  </div>
+                  <div class="td">
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
+                    </div>
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
                     </div>
                   </div>
-                  <div class="tr">
-                    <div class="td">
-                      <label class="checkbox-container checkbox-container--has-image">
-                        <div class="checkbox">
-                          <input type="checkbox" name="type[]" value="Полукомбинезоны">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label"><img src="./img/overall.png" alt="">Полукомбинезоны</span>
-                      </label>
-                    </div>
-                    <div class="td">
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Зима">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Зима</span>
-                      </label>
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Лето">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Лето</span>
-                      </label>
-                    </div>
-                    <div class="td"></div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <label class="checkbox-container item-type">
+                      <div class="checkbox">
+                        <input type="checkbox" name="type[]" value="Куртки">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label"><img src="./img/jacket.png" alt="">Куртки</span>
+                    </label>
                   </div>
-                  <div class="tr">
-                    <div class="td">
-                      <label class="checkbox-container checkbox-container--has-image">
-                        <div class="checkbox">
-                          <input type="checkbox" name="type[]" value="Куртки">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label"><img src="./img/jacket.png" alt="">Куртки</span>
-                      </label>
-                    </div>
-                    <div class="td">
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Зима">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Зима</span>
-                      </label>
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Лето">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Лето</span>
-                      </label>
-                    </div>
-                    <div class="td"></div>
+                  <div class="td">
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Зима">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Зима</span>
+                    </label>
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Лето">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Лето</span>
+                    </label>
                   </div>
-                  <div class="tr">
-                    <div class="td">
-                      <label class="checkbox-container checkbox-container--has-image">
-                        <div class="checkbox">
-                          <input type="checkbox" name="type[]" value="Штаны">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label"><img src="./img/pants.png" alt="">Штаны</span>
-                      </label>
+                  <div class="td">
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
                     </div>
-                    <div class="td">
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Зима">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Зима</span>
-                      </label>
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Лето">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Лето</span>
-                      </label>
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
                     </div>
-                    <div class="td"></div>
                   </div>
-                  <div class="tr">
-                    <div class="td">
-                      <label class="checkbox-container checkbox-container--has-image">
-                        <div class="checkbox">
-                          <input type="checkbox" name="type[]" value="Жилеты">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label"><img src="./img/life-jacket.png" alt="">Жилеты</span>
-                      </label>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <label class="checkbox-container item-type">
+                      <div class="checkbox">
+                        <input type="checkbox" name="type[]" value="Штаны">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label"><img src="./img/pants.png" alt="">Штаны</span>
+                    </label>
+                  </div>
+                  <div class="td">
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Зима">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Зима</span>
+                    </label>
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Лето">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Лето</span>
+                    </label>
+                  </div>
+                  <div class="td">
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
                     </div>
-                    <div class="td">
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Зима">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Зима</span>
-                      </label>
-                      <label class="checkbox-container">
-                        <div class="checkbox">
-                          <input type="checkbox" name="season[]" value="Лето">
-                          <span></span>
-                        </div>
-                        <span class="checkbox-label">Лето</span>
-                      </label>
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
                     </div>
-                    <div class="td"></div>
+                  </div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <label class="checkbox-container item-type">
+                      <div class="checkbox">
+                        <input type="checkbox" name="type[]" value="Жилеты">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label"><img src="./img/life-jacket.png" alt="">Жилеты</span>
+                    </label>
+                  </div>
+                  <div class="td">
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Зима">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Зима</span>
+                    </label>
+                    <label class="checkbox-container item-season">
+                      <div class="checkbox">
+                        <input type="checkbox" name="season[]" value="Лето">
+                        <span></span>
+                      </div>
+                      <span class="checkbox-label">Лето</span>
+                    </label>
+                  </div>
+                  <div class="td">
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
+                    </div>
+                    <div class="counter">
+                      <div class="counter__minus">-</div>
+                      <input type="text" class="counter__value" value="0" />
+                      <div class="counter__plus">+</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="s-calculate__divider"></div>
+            <div class="calc__divider"></div>
 
             <div class="form form--vertical">
               <div class="table-title">Дополнительные пожелания</div>
@@ -414,52 +457,95 @@
 
     <section class="section s-about">
       <div class="container">
-        <h2 class="section-title section-title--left">Почему спецодежда от <br>
-            Dress Code - <span>лучшая?</span></h2>
+        <!-- <h2 class="section-title section-title--left">
+          <span>Почему спецодежда от</span>
+            Dress Code - <i>лучшая?</i></h2> -->
 
         <div class="s-about__content">
-          <div class="scheme">
-            <img src="./img/about-person2.png" alt="" class="scheme__img">
-            <div class="scheme__item scheme-1">
-              <div class="scheme__num">1</div>
-              <h5 class="scheme__title">Прочность</h5>
-              <div class="scheme__text">Для пошива одежды 
-                используем только 
-                армированные нити    </div>
-            </div>
-            <div class="scheme__item scheme-2">
-              <div class="scheme__num">2</div>
-              <h5 class="scheme__title">Надежность</h5>
-              <div class="scheme__text">Процесс производства 
-                соответствует всем 
-                международным стандартам</div>
-            </div>
-            <div class="scheme__item scheme-3">
-              <div class="scheme__num">3</div>
-              <h5 class="scheme__title">Комфорт
-                для ног</h5>
-              <div class="scheme__text">Эргонометричность обуви 
-                позволяет ногам дышать, 
-                в то же время надёжно 
-                защищая от повреждений</div>
-            </div>
-            <div class="scheme__item scheme-4 scheme__item--left">
-              <div class="scheme__num">4</div>
-              <h5 class="scheme__title">Удобство
-                для тела</h5>
-              <div class="scheme__text">Благодаря выверенному
-                крою носить нашу
-                одежду удобно</div>
-            </div>
-            <div class="scheme__item scheme-5 scheme__item--left">
-              <div class="scheme__num">5</div>
-              <h5 class="scheme__title">Выгода</h5>
-              <div class="scheme__text">Полный цикл производства
-                в наших руках. Поэтому
-                вам не придётся
-                ни за что переплачивать</div>
+          <div class="s-about__main">
+            <h2 class="section-title section-title--left">
+                <span>Почему спецодежда от</span>
+                  Dress Code - <i>лучшая?</i></h2>
+            <div class="s-about__scheme">
+              <img src="./img/about-person3.png" alt="" class="scheme__img--mobile">
+              <div class="scheme">
+                <img src="./img/about-person2.png" alt="" class="scheme__img">
+                <div class="scheme__item scheme-1">
+                  <h5 class="scheme__title">Прочность</h5>
+                  <div class="scheme__text">Для пошива одежды 
+                    используем только 
+                    армированные нити    </div>
+                </div>
+                <div class="scheme__item scheme-2">
+                  <h5 class="scheme__title">Надежность</h5>
+                  <div class="scheme__text">Процесс производства 
+                    соответствует всем 
+                    международным стандартам</div>
+                </div>
+                <div class="scheme__item scheme-3">
+                  <h5 class="scheme__title">Комфорт
+                    для ног</h5>
+                  <div class="scheme__text">Эргонометричность обуви 
+                    позволяет ногам дышать, 
+                    в то же время надёжно 
+                    защищая от повреждений</div>
+                </div>
+                <div class="scheme__item scheme-4 scheme__item--left">
+                  <h5 class="scheme__title">Удобство
+                    для тела</h5>
+                  <div class="scheme__text">Благодаря выверенному
+                    крою носить нашу
+                    одежду удобно</div>
+                </div>
+                <div class="scheme__item scheme-5 scheme__item--left">
+                  <h5 class="scheme__title">Выгода</h5>
+                  <div class="scheme__text">Полный цикл производства
+                    в наших руках. Поэтому
+                    вам не придётся
+                    ни за что переплачивать</div>
+                </div>
+              </div>
+              <ol class="s-about__list">
+                <li>
+                  <h5 class="scheme__title">Прочность</h5>
+                  <div class="scheme__text">
+                    Для пошива одежды 
+                    используем только 
+                    армированные нити    
+                  </div>
+                </li>
+                <li>
+                  <h5 class="scheme__title">Надежность</h5>
+                  <div class="scheme__text">Процесс производства 
+                    соответствует всем 
+                    международным стандартам</div>
+                </li>
+                <li>
+                  <h5 class="scheme__title">Комфорт
+                    для ног</h5>
+                  <div class="scheme__text">Эргонометричность обуви 
+                    позволяет ногам дышать, 
+                    в то же время надёжно 
+                    защищая от повреждений</div>
+                </li>
+                <li>
+                  <h5 class="scheme__title">Удобство
+                    для тела</h5>
+                  <div class="scheme__text">Благодаря выверенному
+                    крою носить нашу
+                    одежду удобно</div>
+                </li>
+                <li>
+                  <h5 class="scheme__title">Выгода</h5>
+                  <div class="scheme__text">Полный цикл производства
+                    в наших руках. Поэтому
+                    вам не придётся
+                    ни за что переплачивать</div>
+                </li>
+              </ol>
             </div>
           </div>
+          
           <div class="s-about__aside">
             <div class="s-about__title">Хотите лично убедиться в качестве?</div>
             <div class="s-about__text">Мы готовы предоставить
@@ -468,7 +554,7 @@
                 работником!</div>
             <div class="form form--vertical">
               <form action="/mail.php" method="post">
-                <div class="form__title">Оставьте заявку, 
+                <div class="form__title">Оставьте заявку, <br>
                     и <span>мы свяжемся с вами!</span></div>
                 <div class="form__content">
                   <input type="hidden" name="info" value="Оставьте заявку, и мы свяжемся с вами!">
@@ -493,55 +579,15 @@
             </div>
           </div>          
         </div>
-
-
-        <ol class="s-about__list">
-          <li>
-            <h5 class="scheme__title">Прочность</h5>
-            <div class="scheme__text">
-              Для пошива одежды 
-              используем только 
-              армированные нити    
-            </div>
-          </li>
-          <li>
-            <h5 class="scheme__title">Надежность</h5>
-            <div class="scheme__text">Процесс производства 
-              соответствует всем 
-              международным стандартам</div>
-          </li>
-          <li>
-            <h5 class="scheme__title">Комфорт
-              для ног</h5>
-            <div class="scheme__text">Эргонометричность обуви 
-              позволяет ногам дышать, 
-              в то же время надёжно 
-              защищая от повреждений</div>
-          </li>
-          <li>
-            <h5 class="scheme__title">Удобство
-              для тела</h5>
-            <div class="scheme__text">Благодаря выверенному
-              крою носить нашу
-              одежду удобно</div>
-          </li>
-          <li>
-            <h5 class="scheme__title">Выгода</h5>
-            <div class="scheme__text">Полный цикл производства
-              в наших руках. Поэтому
-              вам не придётся
-              ни за что переплачивать</div>
-          </li>
-        </ol>
       </div>
     </section>
 
     <section class="section s-quality" id="logotype">
       <div class="container">
         <h2 class="section-title section-title--small">
-            Вы гордитесь своим предприятием? <br>
-            Хотите выделиться на фоне конкурентов? <br>
-            <span>Нанесите на спецодежду ваш логотип!</span>
+            <span>Вы гордитесь своим предприятием?</span>
+            <span>Хотите выделиться на фоне конкурентов?</span>
+            <i>Нанесите на спецодежду ваш логотип!</i>
         </h2>
         <div class="row">
           <div class="col">
@@ -601,8 +647,10 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <h2 class="section-title section-title--left">Спецодежду и униформу для <br>
-                своих сотрудников <span>у нас заказывают</span></h2>
+            <h2 class="section-title section-title--left">
+              <span>Спецодежду и униформу для</span>
+              своих сотрудников 
+              <i>у нас заказывают</i></h2>
             <div class="s-employee__content">
               <div class="employee"><img src="./img/technodom.png" alt=""></div>
               <div class="employee"><img src="./img/compass.png" alt=""></div>
@@ -623,8 +671,10 @@
             </div>
           </div>
           <div class="col">
-            <h2 class="section-title section-title--right">Благодарственные письма
-                <span>довольных клиентов</span></h2>
+            <h2 class="section-title section-title--right">
+              <span>Благодарственные письма</span>
+              <i>довольных клиентов</i>
+            </h2>
             <div class="owl-carousel carousel-pismo">
               <div class="pismo"><img src="./img/pismo-thanks-1.jpg" alt=""></div>
               <div class="pismo"><img src="./img/pismo-thanks-2.jpg" alt=""></div>
@@ -637,7 +687,7 @@
 
     <section class="section s-comand">
       <div class="container">
-        <h2 class="section-title inverse">Наша <span>команда</span></h2>
+        <h2 class="section-title inverse">Наша <i>команда</i></h2>
         <div class="s-comand__content">
           <div class="s-comand__block">
             <div class="s-comand__text">Сотрудники Dress Code - профессионалы своего дела</div>
@@ -755,7 +805,7 @@
 
     <section class="section s-production" id="production">
       <div class="container">
-        <h2 class="section-title">Шьем спецодежду и униформу <span>для:</span></h2>
+        <h2 class="section-title">Шьем спецодежду и униформу <i>для:</i></h2>
         <div class="row">
           <div class="col">
             <div class="card">
@@ -889,6 +939,253 @@
       Мы предпринимаем меры предосторожности, включая административные, технические и физические для защиты Вашей персональной информации от утраты, кражи и недобросовестного использования, а также от несанкционированного доступа, раскрытия, изменения и уничтожения.</div>
     <div class="politika__text"><span>Соблюдение Вашей конфиденциальности на уровне компании</span><br>
       Чтобы убедиться, что Ваша персональная информация находится в безопасности, мы доводим нормы соблюдения конфиденциальности и безопасности до наших сотрудников и строго следим за исполнением мер соблюдения конфиденциальности.  </div>    
+  </div>
+
+  <div class="remodal" data-remodal-id="calculate-modal" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close"></button>
+
+    <div class="calc">
+      <div class="table">
+        <div class="thead">
+          <div class="tr">
+            <div class="th">Вид спецодежды</div>
+            <div class="th">Сезон</div>
+            <div class="th">Количество</div>
+          </div>
+        </div>
+        <div class="tbody">
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Костюмы">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><img src="./img/uniform.png" alt="">Костюмы</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Полукомбинезоны">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><img src="./img/overall.png" alt="">Полукомбинезоны</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Куртки">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><img src="./img/jacket.png" alt="">Куртки</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Штаны">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><img src="./img/pants.png" alt="">Штаны</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Жилеты">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><img src="./img/life-jacket.png" alt="">Жилеты</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc__divider"></div>
+
+      <div class="form form--vertical">
+        <div class="table-title">Дополнительные пожелания</div>
+        
+        <label class="checkbox-container">
+          <div class="checkbox">
+            <input type="checkbox" name="Нанесение_логотипа" value="Да">
+            <span></span>
+          </div>
+          <span class="checkbox-label">Нанесение логотипа</span>
+        </label>
+        <div class="input-div">
+          <textarea name="Прочее" id="" rows="3" class="input" placeholder="Прочее (введите текст)"></textarea>
+        </div>
+        <div class="form__title">Контактные данные для обратной связи</div>
+        <div class="form__content">
+
+          <div class="input-div">
+            <input type="text" class="input" name="name" placeholder="Ваше имя">
+          </div>
+
+          <div class="input-div">
+            <input type="tel" class="input" name="phone" placeholder="Номер телефона" required minlength="10">
+            <span class="error-message">Заполните это поле</span>
+          </div>
+
+          <div class="form__info">* Ваши данные в безопасности и не будут 
+              переданы третьим лицам</div>
+
+          <button class="button ajax-submit" type="submit" id="rass4itat_stoimost_poshiva">РАССЧИТАТЬ СТОИМОСТЬ ПОШИВА</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="./js/libs.min.js"></script>

@@ -28,7 +28,7 @@
     <!-- <a href="tel:+" id="callMe" class="call-me"><i class="fa fa-phone"></i></a> -->
 
     <header class="header">
-      <div class="container">
+      <div class="container-full">
         <div class="header__content">
           <a href="/" class="logo">
             <img src="./img/logo.png" alt="Dress Code">
@@ -39,28 +39,37 @@
           </h3>  
 
           <nav class="main-menu">
-            <div class="container">
-              <ul>
-                <li>
-                  <a href="/#production">Продукция</a>
-                </li>
-                <li>
-                  <a href="/#logotype">Нанесение логотипа</a>
-                </li>
-                <li>
-                  <a href="/#contact">Контакты</a>
-                </li>
-                <li class="last">
-                  <a href="/#calculate">Расчитать стоимость</a>
-                </li>
-                <li class="menu-phone">
-                  <a href="tel:+77273170164" class="text-phone" id="phone_number">+ 7 (727) 317- 01-64</a>
-                </li>
-                <li class="menu-phone">
-                  <a href="tel:+77789972630" class="text-phone" id="phone_number">+ 7 (778) 997-26-30</a>
-                </li>
-              </ul>
-            </div>
+            <ul>
+              <li>
+                <a href="/#production">Продукция</a>
+              </li>
+              <li>
+                <a href="/#logotype">Нанесение логотипа</a>
+              </li>
+              <li>
+                <a href="/#contact">Контакты</a>
+              </li>
+              <li class="last">
+                <a href="/#calculate">Расчитать стоимость</a>
+              </li>
+              <li class="menu-phone">
+                <a href="tel:+77273170164" class="text-phone" id="phone_number">+ 7 (727) 317- 01-64</a>
+              </li>
+              <li class="menu-phone">
+                <a href="tel:+77789972630" class="text-phone" id="phone_number">+ 7 (778) 997-26-30</a>
+              </li>
+              <li class="menu-schedule">
+                <span class="schedule__title">
+                  Рабочие часы:
+                </span>
+                <span class="schedule__item">
+                  пн - пт 9:00-18:00
+                </span>
+              </li>
+              <li class="menu-button">
+                <a href="#" class="button" data-remodal-target="zvonok-modal">Заказать звонок</a>
+              </li>
+            </ul>
           </nav>
           
           <div class="schedule">
@@ -100,14 +109,15 @@
         <div class="row">
           <div class="col">
             <div class="blog">
-              <div class="blog__img"><img src="./img/news-1.jpg" alt=""></div>
-              <div class="blog__block">
-                <h3 class="blog__title">Метод наколки на манекене. 
-                    Принципы моделирования одежды </h3>
-                <div class="blog__data">
-                  <img src="./img/clock.png" alt="">
-                  <div class="data">29.04.2019</div>
-                </div>                
+              <div class="blog__img"><img src="./img/news-1.jpg" alt="">
+                <div class="blog__block">
+                  <h3 class="blog__title">Метод наколки на манекене. 
+                      Принципы моделирования одежды </h3>
+                  <div class="blog__data">
+                    <img src="./img/clock.png" alt="">
+                    <div class="data">29.04.2019</div>
+                  </div>                
+                </div>
               </div>
               <div class="blog__content">
                 <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
@@ -122,15 +132,16 @@
           </div>
           <div class="col">
             <div class="blog">
-              <div class="blog__img"><img src="./img/news-2.jpg" alt=""></div>
-              <div class="blog__block">
-                <h3 class="blog__title">Видео-курс по крою и пошиву 
-                    мужского утепленного жилета</h3>
-                <div class="blog__data">
-                  <img src="./img/clock.png" alt="">
-                  <div class="data">12.04.2019</div>
-                </div>                
-              </div>
+              <div class="blog__img"><img src="./img/news-2.jpg" alt="">
+                <div class="blog__block">
+                  <h3 class="blog__title">Видео-курс по крою и пошиву 
+                      мужского утепленного жилета</h3>
+                  <div class="blog__data">
+                    <img src="./img/clock.png" alt="">
+                    <div class="data">12.04.2019</div>
+                  </div>                
+                </div>
+              </div>              
               <div class="blog__content">
                 <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
                 <div class="blog__link">
@@ -144,38 +155,15 @@
           </div>
           <div class="col">
             <div class="blog">
-              <div class="blog__img"><img src="./img/news-1.jpg" alt=""></div>
-              <div class="blog__block">
-                <h3 class="blog__title">Метод наколки на манекене. 
-                    Принципы моделирования одежды </h3>
-                <div class="blog__data">
-                  <img src="./img/clock.png" alt="">
-                  <div class="data">29.04.2019</div>
-                </div>                
-              </div>
-              <div class="blog__content">
-                <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
-                <div class="blog__link">
-                  <a href="#">КРОЙ</a>
-                  <a href="#">ШИТЬЕ</a>
-                  <a href="#">МАНЕКЕН</a>
+              <div class="blog__img"><img src="./img/news-1.jpg" alt="">
+                <div class="blog__block">
+                  <h3 class="blog__title">Метод наколки на манекене. 
+                      Принципы моделирования одежды </h3>
+                  <div class="blog__data">
+                    <img src="./img/clock.png" alt="">
+                    <div class="data">29.04.2019</div>
+                  </div>                
                 </div>
-                <a href="" class="more">Подробнее</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="blog">
-              <div class="blog__img"><img src="./img/news-1.jpg" alt=""></div>
-              <div class="blog__block">
-                <h3 class="blog__title">Метод наколки на манекене. 
-                    Принципы моделирования одежды </h3>
-                <div class="blog__data">
-                  <img src="./img/clock.png" alt="">
-                  <div class="data">29.04.2019</div>
-                </div>                
               </div>
               <div class="blog__content">
                 <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
@@ -190,15 +178,39 @@
           </div>
           <div class="col">
             <div class="blog">
-              <div class="blog__img"><img src="./img/news-2.jpg" alt=""></div>
-              <div class="blog__block">
-                <h3 class="blog__title">Видео-курс по крою и пошиву 
-                    мужского утепленного жилета</h3>
-                <div class="blog__data">
-                  <img src="./img/clock.png" alt="">
-                  <div class="data">12.04.2019</div>
-                </div>                
+              <div class="blog__img"><img src="./img/news-1.jpg" alt="">
+                <div class="blog__block">
+                  <h3 class="blog__title">Метод наколки на манекене. 
+                      Принципы моделирования одежды </h3>
+                  <div class="blog__data">
+                    <img src="./img/clock.png" alt="">
+                    <div class="data">29.04.2019</div>
+                  </div>                
+                </div>
               </div>
+              <div class="blog__content">
+                <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
+                <div class="blog__link">
+                  <a href="#">КРОЙ</a>
+                  <a href="#">ШИТЬЕ</a>
+                  <a href="#">МАНЕКЕН</a>
+                </div>
+                <a href="" class="more">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="blog">
+              <div class="blog__img"><img src="./img/news-2.jpg" alt="">
+                <div class="blog__block">
+                  <h3 class="blog__title">Видео-курс по крою и пошиву 
+                      мужского утепленного жилета</h3>
+                  <div class="blog__data">
+                    <img src="./img/clock.png" alt="">
+                    <div class="data">12.04.2019</div>
+                  </div>                
+                </div>
+              </div>              
               <div class="blog__content">
                 <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
                 <div class="blog__link">
@@ -212,38 +224,15 @@
           </div>
           <div class="col">
             <div class="blog">
-              <div class="blog__img"><img src="./img/news-1.jpg" alt=""></div>
-              <div class="blog__block">
-                <h3 class="blog__title">Метод наколки на манекене. 
-                    Принципы моделирования одежды </h3>
-                <div class="blog__data">
-                  <img src="./img/clock.png" alt="">
-                  <div class="data">29.04.2019</div>
-                </div>                
-              </div>
-              <div class="blog__content">
-                <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
-                <div class="blog__link">
-                  <a href="#">КРОЙ</a>
-                  <a href="#">ШИТЬЕ</a>
-                  <a href="#">МАНЕКЕН</a>
+              <div class="blog__img"><img src="./img/news-1.jpg" alt="">
+                <div class="blog__block">
+                  <h3 class="blog__title">Метод наколки на манекене. 
+                      Принципы моделирования одежды </h3>
+                  <div class="blog__data">
+                    <img src="./img/clock.png" alt="">
+                    <div class="data">29.04.2019</div>
+                  </div>                
                 </div>
-                <a href="" class="more">Подробнее</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <div class="blog">
-              <div class="blog__img"><img src="./img/news-1.jpg" alt=""></div>
-              <div class="blog__block">
-                <h3 class="blog__title">Метод наколки на манекене. 
-                    Принципы моделирования одежды </h3>
-                <div class="blog__data">
-                  <img src="./img/clock.png" alt="">
-                  <div class="data">29.04.2019</div>
-                </div>                
               </div>
               <div class="blog__content">
                 <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
@@ -258,15 +247,39 @@
           </div>
           <div class="col">
             <div class="blog">
-              <div class="blog__img"><img src="./img/news-2.jpg" alt=""></div>
-              <div class="blog__block">
-                <h3 class="blog__title">Видео-курс по крою и пошиву 
-                    мужского утепленного жилета</h3>
-                <div class="blog__data">
-                  <img src="./img/clock.png" alt="">
-                  <div class="data">12.04.2019</div>
-                </div>                
+              <div class="blog__img"><img src="./img/news-1.jpg" alt="">
+                <div class="blog__block">
+                  <h3 class="blog__title">Метод наколки на манекене. 
+                      Принципы моделирования одежды </h3>
+                  <div class="blog__data">
+                    <img src="./img/clock.png" alt="">
+                    <div class="data">29.04.2019</div>
+                  </div>                
+                </div>
               </div>
+              <div class="blog__content">
+                <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
+                <div class="blog__link">
+                  <a href="#">КРОЙ</a>
+                  <a href="#">ШИТЬЕ</a>
+                  <a href="#">МАНЕКЕН</a>
+                </div>
+                <a href="" class="more">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="blog">
+              <div class="blog__img"><img src="./img/news-2.jpg" alt="">
+                <div class="blog__block">
+                  <h3 class="blog__title">Видео-курс по крою и пошиву 
+                      мужского утепленного жилета</h3>
+                  <div class="blog__data">
+                    <img src="./img/clock.png" alt="">
+                    <div class="data">12.04.2019</div>
+                  </div>                
+                </div>
+              </div>              
               <div class="blog__content">
                 <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
                 <div class="blog__link">
@@ -280,14 +293,15 @@
           </div>
           <div class="col">
             <div class="blog">
-              <div class="blog__img"><img src="./img/news-1.jpg" alt=""></div>
-              <div class="blog__block">
-                <h3 class="blog__title">Метод наколки на манекене. 
-                    Принципы моделирования одежды </h3>
-                <div class="blog__data">
-                  <img src="./img/clock.png" alt="">
-                  <div class="data">29.04.2019</div>
-                </div>                
+              <div class="blog__img"><img src="./img/news-1.jpg" alt="">
+                <div class="blog__block">
+                  <h3 class="blog__title">Метод наколки на манекене. 
+                      Принципы моделирования одежды </h3>
+                  <div class="blog__data">
+                    <img src="./img/clock.png" alt="">
+                    <div class="data">29.04.2019</div>
+                  </div>                
+                </div>
               </div>
               <div class="blog__content">
                 <div class="blog__text">This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</div>
@@ -395,5 +409,7 @@
       Чтобы убедиться, что Ваша персональная информация находится в безопасности, мы доводим нормы соблюдения конфиденциальности и безопасности до наших сотрудников и строго следим за исполнением мер соблюдения конфиденциальности.  </div>    
   </div>
 
+  <script src="./js/libs.min.js"></script>
+  <script src="./js/main.min.js"></script>
 </body>
 </html>
