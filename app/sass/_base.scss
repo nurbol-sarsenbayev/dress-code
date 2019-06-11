@@ -189,7 +189,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 25px;
 	color: #ffffff;
 	opacity: .3;
-	transition: all .5s ease-out;	
+  transition: all .5s ease-out;	
+  @include xs-block() {
+    bottom: 70px;
+  }
 
 	&.active {		
 		right: 20px;			

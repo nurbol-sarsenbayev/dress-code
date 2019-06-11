@@ -185,6 +185,7 @@
 .footer {
   padding: 15px 0;
   margin-top: 35px;
+  @include xs(padding, 15px 0 80px);
 
   .container-full {
     max-width: 1277px;
