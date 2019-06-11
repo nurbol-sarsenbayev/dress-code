@@ -200,41 +200,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-.call-me {
-  position: fixed;
-	bottom: 20px;
-	left: 20px;
-	z-index: 99;
-	cursor: pointer;
-  @include circle(50px);
-  background-color: #58ea00;
-  cursor: pointer;
-  display: none;
-
-  .fa {
-    color: #fff;
-    font-size: 25px;
-    position: relative;
-    top: 1px;
-  }
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    right: -15px;
-    bottom: -15px;
-    border: 1px solid #58ea00;
-    border-radius: 50%;
-    animation: pulse 1.5s linear infinite;
-  }
-
-  &:after {
-    animation-delay: 0.5s;
-  }
-}
 
 @keyframes pulse {
   0% {
@@ -379,9 +344,10 @@ h1, h2, h3, h4, h5, h6 {
   flex-shrink: 0;
     
   &__title {
-    font-size: 2.4rem;
+    font-size: 24px;
     font-family: $secondary_font;
     margin-bottom: 3.5rem;
+    @include lg(font-size, 20px);
     span {
       color: #173683;
       font-style: italic;
@@ -485,6 +451,14 @@ h1, h2, h3, h4, h5, h6 {
       box-shadow: 0px 4px 0px 0px rgba(194, 158, 76, 0.28);    
       outline: 0;
       z-index: 10;
+      @include xl-block() {
+        width: 45px;
+        height: 45px;
+      }
+      @include sm-block() {
+        width: 40px;
+        height: 40px;
+      } 
       &:before {
         content: "";
         display: block;
@@ -492,7 +466,15 @@ h1, h2, h3, h4, h5, h6 {
         background-position: center;
         background-repeat: no-repeat;
         width: 51px;
-        height: 51px;    
+        height: 51px;
+        @include xl-block() {
+          width: 45px;
+          height: 45px;
+        }   
+        @include sm-block() {
+          width: 40px;
+          height: 40px;
+        } 
       }
 		}
 
@@ -626,8 +608,15 @@ h1, h2, h3, h4, h5, h6 {
       &-label {
         display: flex;
         align-items: center;
-        img {
+        &__img {
+          width: 39px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-right: 20px;
+        }
+        img {
+          // margin-right: 20px;    
         }
       }
     }
@@ -709,4 +698,68 @@ h1, h2, h3, h4, h5, h6 {
 strong {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.callback {
+  &__wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #43a047;
+    z-index: 1000;
+    display: none;
+    @include xs-block() {
+      display: block !important; 
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+
+    &:first-child {
+      border-left: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    a {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin: 0 auto 5px;
+    width: 40px;
+    height: 28px;
+  }
+
+  &__whatsapp {
+    background: url(https://nurbol-sarsenbayev.github.io/cdn/svg/whatsapp-icon.svg) no-repeat center;
+  }
+
+  &__phone {
+    background: url(https://nurbol-sarsenbayev.github.io/cdn/svg/phone-icon.svg) no-repeat center;
+  }
 }

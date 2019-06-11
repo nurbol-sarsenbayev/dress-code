@@ -25,7 +25,20 @@
   <div class="page-wrapper">
 
     <div class="page-top"><i class="fa fa-angle-double-up"></i></div>
-    <!-- <a href="tel:+" id="callMe" class="call-me"><i class="fa fa-phone"></i></a> -->
+    <div class="callback__wrapper">
+      <div class="callback__items">
+        <div class="callback__item">
+          <a target="_parent" href="https://api.whatsapp.com/send?phone=77789972630" id="whatsapp">
+            <i class="callback__icon callback__whatsapp"></i> WhatsApp
+          </a>
+        </div>
+        <div class="callback__item">
+          <a href="tel:+77789972630" id="callMe" class="call-me">
+            <i class="callback__icon callback__phone"></i>  Позвонить
+          </a>
+        </div>
+      </div>
+    </div>
 
     <header class="header">
       <div class="container-full">
@@ -123,7 +136,7 @@
                 <script src="//megatimer.ru/get/08e0704f40092310b07593d57e07f9ce.js"></script>
               </div>
             </div>            
-            <buttton class="button">РАССЧИТАТЬ</buttton>
+            <buttton class="button" data-remodal-target="calculate-modal">РАССЧИТАТЬ</buttton>
           </div>
         </div>
 
@@ -226,7 +239,7 @@
                         <input type="checkbox" name="type[]" value="Костюмы">
                         <span></span>
                       </div>
-                      <span class="checkbox-label"><img src="./img/uniform.png" alt="">Костюмы</span>
+                      <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/uniform.png" alt=""></div> Костюмы</span>
                     </label>
                   </div>
                   <div class="td">
@@ -265,7 +278,7 @@
                         <input type="checkbox" name="type[]" value="Полукомбинезоны">
                         <span></span>
                       </div>
-                      <span class="checkbox-label"><img src="./img/overall.png" alt="">Полукомбинезоны</span>
+                      <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/overall.png" alt=""></div>Полукомбинезоны</span>
                     </label>
                   </div>
                   <div class="td">
@@ -304,7 +317,7 @@
                         <input type="checkbox" name="type[]" value="Куртки">
                         <span></span>
                       </div>
-                      <span class="checkbox-label"><img src="./img/jacket.png" alt="">Куртки</span>
+                      <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/jacket.png" alt=""></div>Куртки</span>
                     </label>
                   </div>
                   <div class="td">
@@ -343,7 +356,7 @@
                         <input type="checkbox" name="type[]" value="Штаны">
                         <span></span>
                       </div>
-                      <span class="checkbox-label"><img src="./img/pants.png" alt="">Штаны</span>
+                      <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/pants.png" alt=""></div>Штаны</span>
                     </label>
                   </div>
                   <div class="td">
@@ -382,7 +395,7 @@
                         <input type="checkbox" name="type[]" value="Жилеты">
                         <span></span>
                       </div>
-                      <span class="checkbox-label"><img src="./img/life-jacket.png" alt="">Жилеты</span>
+                      <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/life-jacket.png" alt=""></div>Жилеты</span>
                     </label>
                   </div>
                   <div class="td">
@@ -669,6 +682,20 @@
               <div class="employee"><img src="./img/dav.png" alt=""></div>
               <div class="employee"><img src="./img/amiran.png" alt=""></div>
             </div>
+            <div class="owl-carousel carousel-employee">
+              <div class="employee"><img src="./img/technodom.png" alt=""></div>
+              <div class="employee"><img src="./img/compass.png" alt=""></div>
+              <div class="employee"><img src="./img/kixx.png" alt=""></div>    
+              <div class="employee"><img src="./img/armtek.png" alt=""></div>
+              <div class="employee"><img src="./img/castrol.png" alt=""></div>
+              <div class="employee"><img src="./img/shinlain.png" alt=""></div>
+              <div class="employee"><img src="./img/kazakhaltyn.png" alt=""></div>
+              <div class="employee"><img src="./img/globalink.png" alt=""></div>
+              <div class="employee"><img src="./img/azyamebel.png" alt=""></div>
+              <div class="employee"><img src="./img/cbc.png" alt=""></div>
+              <div class="employee"><img src="./img/dav.png" alt=""></div>
+              <div class="employee"><img src="./img/amiran.png" alt=""></div>
+            </div>
           </div>
           <div class="col">
             <h2 class="section-title section-title--right">
@@ -832,6 +859,24 @@
             </div>
           </div>
         </div>
+        <div class="owl-carousel carousel-production">
+          <div class="card">
+            <div class="card__image"><img src="./img/unionalls-1.jpg" alt=""></div>
+            <h4 class="card__title">Спецодежда</h4>
+          </div>
+          <div class="card">
+            <div class="card__image"><img src="./img/unionalls-2.jpg" alt=""></div>
+            <h4 class="card__title">Униформа</h4>
+          </div>
+          <div class="card">
+            <div class="card__image"><img src="./img/unionalls-3.jpg" alt=""></div>
+            <h4 class="card__title">Спецобувь</h4>
+          </div>
+          <div class="card">
+            <div class="card__image"><img src="./img/unionalls-4.jpg" alt=""></div>
+            <h4 class="card__title">Средства индивидуальной защиты</h4>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -961,7 +1006,7 @@
                   <input type="checkbox" name="type[]" value="Костюмы">
                   <span></span>
                 </div>
-                <span class="checkbox-label"><img src="./img/uniform.png" alt="">Костюмы</span>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/uniform.png" alt=""></div>Костюмы</span>
               </label>
             </div>
             <div class="td">
@@ -1000,7 +1045,7 @@
                   <input type="checkbox" name="type[]" value="Полукомбинезоны">
                   <span></span>
                 </div>
-                <span class="checkbox-label"><img src="./img/overall.png" alt="">Полукомбинезоны</span>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/overall.png" alt=""></div>Полукомбинезоны</span>
               </label>
             </div>
             <div class="td">
@@ -1039,7 +1084,7 @@
                   <input type="checkbox" name="type[]" value="Куртки">
                   <span></span>
                 </div>
-                <span class="checkbox-label"><img src="./img/jacket.png" alt="">Куртки</span>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/jacket.png" alt=""></div>Куртки</span>
               </label>
             </div>
             <div class="td">
@@ -1078,7 +1123,7 @@
                   <input type="checkbox" name="type[]" value="Штаны">
                   <span></span>
                 </div>
-                <span class="checkbox-label"><img src="./img/pants.png" alt="">Штаны</span>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/pants.png" alt=""></div>Штаны</span>
               </label>
             </div>
             <div class="td">
@@ -1117,7 +1162,7 @@
                   <input type="checkbox" name="type[]" value="Жилеты">
                   <span></span>
                 </div>
-                <span class="checkbox-label"><img src="./img/life-jacket.png" alt="">Жилеты</span>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/life-jacket.png" alt=""></div>Жилеты</span>
               </label>
             </div>
             <div class="td">

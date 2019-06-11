@@ -122,6 +122,11 @@
   @include xxl(font-size, 17px);
   @include x1450(font-size, 15px);
 
+  &--2 {
+    margin-bottom: 70px;
+    @include md(margin-bottom, 40px);
+  }
+
   .home-page & {
     position: fixed;
   }
@@ -178,7 +183,6 @@
 }
 
 .footer {
-  font-size: 16px;
   padding: 15px 0;
   margin-top: 35px;
 
@@ -192,6 +196,14 @@
     .container {
       max-width: 1820px;
     }
+    @include xl-block() {
+      .footer__title {
+        max-width: 160px;
+      }
+      .text-phone {
+        font-size: 16px;
+      }
+    }
   }
 
   &__title {
@@ -201,6 +213,19 @@
       font-weight: bold;
       text-transform: uppercase;
       color: $secondary;
+    }
+    @include xl-block() {
+      font-size: 15px;
+    }
+  }
+
+  &__comand {
+    font-size: 15px;
+    @include xl-block() {
+      font-size: 10px;
+      img {
+        max-width: 140px;
+      }
     }
   }
 
@@ -366,28 +391,43 @@
   background-position: center center;
 
   &-title {
-    font-size: 5rem;
+    font-size: 50px;
     font-weight: normal;
     font-family: $secondary_font;
     color: rgb(42, 42, 42);
     margin: 0 auto 1.2em;
     text-align: center;
-    @include sm(font-size, 4rem);
+    @include md(font-size, 30px);
+    @include sm(font-size, 24px !important);
     &--left {
       margin: 0 auto 70px 0;
       text-align: left;
+      @include xl-block() {
+        margin: 0 auto 50px 0;
+      }
+      @include md-block() {
+        margin: 0 auto 50px;
+        text-align: center;
+      }
     }
     &--right {
       text-align: right;
       margin: 0 0 70px auto;
+      @include xl-block() {
+        margin: 0 50px 0 auto;
+      }
+      @include md-block() {
+        margin: 0 auto 50px;
+        text-align: center;
+      }
     }
     &--medium {
-      font-size: 4rem;
-      @include sm(font-size, 3rem);
+      font-size: 40px;
+      @include md(font-size, 24px);
     }
     &--small {
-      font-size: 3.5rem;
-      @include sm(font-size, 2.5rem);
+      font-size: 35px;
+      @include sm(font-size, 24px);
     }
 
     i {
@@ -412,13 +452,23 @@
     @include xl-block() {
       margin-bottom: 20px;
     }
+    @include md-block() {
+      // font-size: 14px;
+    }
     img {
       margin: 0 10px;
+      @include md-block() {
+        margin: 0 3px;
+      }
     }
   }
 }
 
 .timer {
+  @include sm-block() {
+    display: flex;
+    justify-content: center;
+  }
   & > div {
     text-align: left !important;
   }
@@ -496,12 +546,15 @@
   }
 
   &__title {
-    font-size: 2.4rem;
-    margin-bottom: 3.5rem;
+    font-size: 24px;
+    margin-bottom: 35px;
     @include xl(margin-bottom, 2rem);
-    @include sm-block() {
-      // font-size: 17px;
-      // margin-bottom: 25px;
+    @include xl-block() {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+    @include xl-block() {
+      font-size: 17px;
     }
     span {
       color: #173683;
@@ -519,10 +572,10 @@
   }
 
   &__info {
-    font-size: 1.9rem;
+    font-size: 19px;
     margin-bottom: 8px;
     @include lg-block() {
-      font-size: 15px;
+      font-size: 16px;
     }
     @include sm-block() {
       text-align: center;
@@ -530,7 +583,7 @@
   }
 
   .button {
-    font-size: 1.6rem;
+    font-size: 16px;
     max-width: 23.2rem;
     width: 100%;
     padding: 2rem 2rem;
@@ -540,8 +593,10 @@
       padding: 15px
     }
     @include sm-block() {
+      max-width: 200px;
       margin: 20px auto 0;
       display: block;
+      font-size: 14px;
     }
   }
 }
@@ -694,12 +749,6 @@
     position: relative;
   }
 
-  // &__img {
-  //   position: absolute;
-  //   right: 0;
-  //   top: 0;
-  // }
-
   &__title {
     font-size: 50px;
     font-weight: normal;
@@ -823,7 +872,7 @@
       text-transform: uppercase;
       color: #2d2d2d;
       z-index: 1;
-      @include x1400(font-size, 15px);
+      @include xl(font-size, 15px);
     }
   }
 }
@@ -833,6 +882,14 @@
   padding: 220px 0 220px;
   @include xl-block() {
     background-position: center right;
+  }
+  @include md-block() {
+    background-image: none;
+    padding: 40px 0;
+  }
+
+  .row {
+    @include md(display, none);
   }
 
   .col {
@@ -851,11 +908,25 @@
       }
     }
   }
+
+  .carousel-production {
+    display: none;
+    @include md(display, block);
+
+    .owl {
+      &-item {
+        padding: 25px;
+      }      
+    }   
+  }
 }
 
 .s-quality {
   position: relative;
   padding: 150px 0 230px;
+  @include md-block() {
+    padding: 40px 0;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -863,6 +934,9 @@
     width: 1920px;
     height: 215px;
     top: -70px;
+    @include md-block() {
+      background-image: none;
+    }
   }
 
   &::after {
@@ -872,6 +946,9 @@
     width: 1920px;
     height: 310px;
     bottom: 0;
+    @include md-block() {
+      background-image: none;
+    }
   }
 
   .container {
@@ -951,6 +1028,7 @@
 }
 
 .s-employee {
+  @include md(padding, 50px 0 80px 0);  
 
   .container {
     max-width: 1655px;
@@ -963,21 +1041,25 @@
 
   .section-title {
     font-size: 28px;
+    @include md(font-size, 24px);
+    
     &--left {
       max-width: 510px;
     }
     &--right {
       max-width: 375px;
       margin-bottom: 50px;
+      @include md(margin-bottom, 40px);
     }
   }
 
   &__content {
-    // max-width: 770px;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    @include sm-block() {
+      display: none;
+    }
   }
 
   .employee {
@@ -985,13 +1067,30 @@
     &:last-child {
       margin-right: 0;
     }
+    @include xl-block() {
+      margin: 0 20px 25px 0;
+    }
+    @include lg-block() {
+      margin: 0 10px 20px 0;
+    }
+    @include sm-block() {
+      margin: 0;
+    }
+  }
+
+  .carousel-employee {
+    display: none;
+    margin-bottom: 50px;
+    @include sm-block() {
+      display: block;
+    }
   }
 
   .pismo {
     box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.13);
   }
 
-  .owl-carousel {
+  .carousel-pismo {
     max-width: 710px;
     margin: 0 0 0 auto;
     .owl {
@@ -1004,6 +1103,14 @@
         left: 20px;
         display: flex;
         justify-content: flex-start;
+        @include xl-block() {
+          top: -70px;
+        }
+        @include lg-block() {
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
     }    
   }
@@ -1012,6 +1119,11 @@
 .s-comand {
   background-image: url("../img/comand-back.png");
   padding: 200px 0 270px;
+
+  @include md-block() {
+    padding: 40px 0;
+    background-image: url("../img/comand-back2.jpg");
+  }
 
   &__content {
     display: flex;
@@ -1243,16 +1355,18 @@
   }
 
   &__title {
-    font-size: 2.4rem;
+    font-size: 24px;
     font-weight: bold;
     color: #173683;
     margin: 50px 0 35px auto;
     max-width: 280px;
     text-align: right;
     @include xl-block() {
+      font-size: 20px;
       margin: 30px 0 25px auto;
     }
     @include md-block() {
+      // font-size: 18px;
       max-width: 350px;
       text-align: center;
       margin: 0 auto 15px;
@@ -1260,14 +1374,16 @@
   }
 
   &__text {
-    font-size: 2.4rem;
+    font-size: 24px;
     max-width: 300px;
     text-align: right;
     margin: 0 0 75px auto;
     @include xl-block() {
+      font-size: 20px;
       margin-bottom: 40px;
     }
     @include md-block() {
+      font-size: 18px;
       max-width: 350px;
       text-align: center;
       margin: 0 auto 20px;
@@ -1591,6 +1707,13 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 120px;
+    @include xl-block() {
+      margin-bottom: 80px;
+    }
+    @include md-block() {      
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__img {
@@ -1603,16 +1726,25 @@
   &__block {
     max-width: 500px;
     width: 100%;
+    @include xl-block() {
+      margin: 0 20px;
+    }
+    @include md-block() {
+      margin: 30px auto;
+    }
   }
 
   &__basket {
-    max-width: 270px;
+    max-width: 200px;
     width: 100%;
     &__title {
       font-size: 40px;
       color: #072877;
       text-align: center;
       margin-bottom: 20px;
+      @include xl-block() {
+        font-size: 30px;
+      }
     }
     .button {
       font-weight: bold;
@@ -1628,13 +1760,19 @@
     border-bottom: 1px solid #e57745;
     margin-top: 15px;
     display: inline-block;
+    @include xl-block() {
+      font-size: 16px;
+    }
+    @include sm-block() {
+      font-size: 14px;
+    }
   }
 
   .costume {
 
     &__img {
       &--1 {
-        box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.14);
+        box-shadow: 0px 0px 27px 0px rgba(0, 0, 0, 0.14);        
       }
       img {
         border-radius: 20px;
@@ -1643,6 +1781,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between; 
+        @include xl(margin-left, 15px);
       }
     }
 
@@ -1650,32 +1789,53 @@
       font-size: 39px;
       font-weight: bold;
       margin-bottom: 40px;
+      @include xl-block() {
+        font-size: 30px;
+        margin-bottom: 25px;
+      }
     }
 
     &__text {
       font-size: 19px;
       margin-bottom: 50px;
+      @include xl-block() {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
     }
 
     &__characteristics {
       font-size: 22px;
       margin-bottom: 25px;
+      @include xl-block() {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
 
       &__content {
         margin-bottom: 15px;
         display: flex;
+        @include xl-block() {
+          margin-bottom: 10px;
+        }
       }
     }
 
     &__characteristic {
       font-size: 18px;
       font-weight: bold;
+      @include xl-block() {
+        font-size: 16px;
+      }
 
       &__title {
         font-size: 18px;
         margin-right: 40px;
         max-width: 170px;
         width: 100%;
+        @include xl-block() {
+          font-size: 16px;
+        }
       }
     }
     
@@ -1683,6 +1843,9 @@
 
   .calculate {
     margin-bottom: 150px;
+    @include xl-block() {
+      margin-bottom: 100px;
+    }
   }
 }
 
@@ -1692,9 +1855,14 @@
     max-width: 1500px;
   }
 
+  .section-link {
+    margin-bottom: 50px;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
+    @include md(display, block);
   }
 
   &__aside {
@@ -1702,9 +1870,96 @@
     width: 100%;
   }
 
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    @include lg-block() {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .season {    
+    display: flex;
+    @include lg(margin-bottom, 20px);
+    &__title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: 35px;
+      @include xl-block() {
+        font-size: 18px;
+        margin-right: 20px;
+      }
+    }
+
+    .checkbox {
+      margin-right: 12px;
+      &-container {
+        margin-right: 35px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
   .katalog {
     position: relative;
     margin-bottom: 50px;
+
+    @include xs-block() {
+      max-width: 300px;
+      margin: 0 auto 30px;
+    }
+
+    &__link {
+      display: flex;
+      font-size: 20px;
+      @include xl(font-size, 18px);
+      &__title {
+        font-weight: bold;
+      }
+      a {
+        margin-left: 30px;
+        @include xl(margin-left, 20px);
+      }
+    }
+
+    &__type {
+      &__title {
+        font-size: 23px;
+        font-weight: bold;
+        margin-bottom: 35px;
+        @include xl-block () {
+          font-size: 20px;
+          margin-bottom: 25px;
+        }
+        @include md-block () {
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        img {
+          margin-left: 15px;
+        }
+      }
+      &__main {
+        margin-bottom: 60px;
+        // display: none;
+        @include lg(margin-bottom, 30px);
+      }
+      .checkbox {
+        margin-right: 12px;
+        &-container {
+          margin-bottom: 20px;
+          @include lg(margin-bottom, 10px);
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
 
     img {
       border-radius: 19px;
@@ -1770,8 +2025,16 @@
       text-align: center;
       color: #363636;
       margin-bottom: 110px;
+      @include md-block() {
+        font-size: 18px;
+        margin-bottom: 80px;
+      }
       img {
         margin-top: 20px;
+        @include md-block() {
+          margin-top: 10px;
+          width: 30px;
+        }
       }
     }
   }
@@ -1784,6 +2047,9 @@
 .s-thanks {
   padding: 240px 0 100px 0;
   flex-grow: 1;
+  @include sm-block() {
+    padding: 100px 10px;
+  }
   .container {
     max-width: 1500px;
   }  

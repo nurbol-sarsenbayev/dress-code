@@ -213,10 +213,32 @@ $(document).ready(function () {
     margin: 0,
     navText: ['', ''],
     responsive: {
-      0: { items: 1, mouseDrag: false, dots: true, nav: false },
+      0: { items: 1, mouseDrag: false, dots: false, nav: true },
       576: { items: 2, mouseDrag: true, dots: false, nav: true },
       992: { items: 3, mouseDrag: true, dots: false, nav: true },
       1200: { items: 4, mouseDrag: true, dots: false, nav: true },
+    },
+  });
+
+  $(".carousel-production").owlCarousel({
+    loop: false,
+    smartSpeed: 500,
+    margin: 30,
+    navText: ['', ''],
+    responsive: {
+      0: { items: 1, mouseDrag: false, dots: false, nav: true },
+      580: { items: 2, mouseDrag: true, dots: false, nav: true },
+    },
+  });
+  
+  $(".carousel-employee").owlCarousel({
+    loop: false,
+    smartSpeed: 500,
+    margin: 30,
+    navText: ['', ''],
+    responsive: {
+      0: { items: 1, mouseDrag: false, dots: false, nav: true },
+      580: { items: 2, mouseDrag: true, dots: false, nav: true },
     },
   });
 
@@ -226,7 +248,7 @@ $(document).ready(function () {
     margin: 30,
     navText: ['', ''],
     responsive: {
-      0: { items: 1, mouseDrag: false, dots: true, nav: false },
+      0: { items: 1, mouseDrag: false, dots: false, nav: true },
       768: { items: 2, mouseDrag: true, dots: false, nav: true },
     },
   });
