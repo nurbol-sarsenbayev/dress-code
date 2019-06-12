@@ -161,11 +161,16 @@ $(document).ready(function () {
   $('.item-season input').change(function() {
     var $this = $(this);
     var $tr = $this.closest('.tr');
-    var index = $this.closest('.item-season').index() + 1;
+    var $season = $this.closest('.item-season');
+    var index = $season.index() + 1;
     var isChecked = $this.prop('checked');
     if (isChecked) {
-      $tr.find('.counter:nth-child(' + index + ')').addClass('active');
+      $season.addClass('item-season--active');
+      $tr.find('.counter:nth-child(' + index + ')').addClass('active')
+        .find('input').val(1);
     } else {
+      $season.removeClass('item-season--active');
+      $season.next('.input-div').val('');
       $tr.find('.counter:nth-child(' + index + ')').removeClass('active')
          .find('input').val(0);
     }

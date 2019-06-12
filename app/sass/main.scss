@@ -609,6 +609,7 @@
   max-width: 1471px;
   width: 100%;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   margin: 0 auto;
@@ -647,7 +648,7 @@
 
   .form {
     width: 390px;
-    padding: 2rem 3rem;
+    padding: 2rem 3rem 3rem;
     @include lg(margin-top, 15px);
     @include xs-block() {
       width: 100%;
@@ -685,14 +686,28 @@
     }
     .tr {
       display: table-row;
-    }
+      &--top {
+        .td, .th {
+          vertical-align: top;
+        }
+      }
+     }
     .td, .th {
       display: table-cell;
       padding: 20px 20px;
       vertical-align: middle;
-    }
+     }
     .th {
       font-weight: bold;
+    }
+    .item-season {
+      min-width: 131px;
+      & + .input-div {
+        margin-top: 10px;
+      }
+      &:not(.item-season--active) + .input-div {
+        display: none;
+      }
     }
     .item-season, .counter {
       height: 24px;
