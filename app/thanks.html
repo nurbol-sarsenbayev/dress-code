@@ -63,7 +63,7 @@
                 <a href="/#contact">Контакты</a>
               </li>
               <li class="last">
-                <a href="/#calculate">Расчитать стоимость</a>
+                <a href="/#calculate-modal">Расчитать стоимость</a>
               </li>
               <li class="menu-phone">
                 <a href="tel:+77273170164" class="text-phone" id="phone_number">+ 7 (727) 317- 01-64</a>
@@ -161,6 +161,346 @@
         <div class="footer__politika">Политика конфиденциальности</div>
       </div>
     </footer>
+  </div>
+
+  <div class="remodal" data-remodal-id="calculate-modal" data-remodal-options="hashTracking: true">
+    <button data-remodal-action="close" class="remodal-close"></button>
+
+    <div class="calc">
+      <div class="table">
+        <div class="thead">
+          <div class="tr">
+            <div class="th">Вид спецодежды</div>
+            <div class="th">Подвид</div>
+            <div class="th">Количество</div>
+          </div>
+        </div>
+        <div class="tbody">
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Костюмы">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/uniform.png" alt=""></div>Костюмы</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Полукомбинезоны">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/overall.png" alt=""></div>Полукомбинезоны</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Куртки">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/jacket.png" alt=""></div>Куртки</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Штаны">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/pants.png" alt=""></div>Брюки</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="tr">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Жилеты">
+                  <span></span>
+                </div>
+                <span class="checkbox-label"><div class="checkbox-label__img"><img src="./img/life-jacket.png" alt=""></div>Жилеты</span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Зима">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Зима</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Лето">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Лето</span>
+              </label>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="tr tr--top">
+            <div class="td">
+              <label class="checkbox-container item-type">
+                <div class="checkbox">
+                  <input type="checkbox" name="type[]" value="Униформа">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">
+                    <div class="checkbox-label__img"><img src="./img/life-jacket.png" alt=""></div>
+                    Униформа
+                </span>
+              </label>
+            </div>
+            <div class="td">
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Фартук">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Фартук</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Халат">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Халат</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Брюки">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Брюки</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Футболка">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Футболка</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Куртка">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Куртка</span>
+              </label>
+              <label class="checkbox-container item-season">
+                <div class="checkbox">
+                  <input type="checkbox" name="season[]" value="Другое">
+                  <span></span>
+                </div>
+                <span class="checkbox-label">Другое</span>
+              </label>
+              <div class="input-div">
+                <textarea name="Другое" id="" rows="2" class="input" placeholder="введите текст"></textarea>
+              </div>
+            </div>
+            <div class="td">
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                <div class="counter__minus">-</div>
+                <input type="text" class="counter__value" value="0" />
+                <div class="counter__plus">+</div>
+              </div>
+              <div class="counter">
+                  <div class="counter__minus">-</div>
+                  <input type="text" class="counter__value" value="0" />
+                  <div class="counter__plus">+</div>
+                </div>
+                <div class="counter">
+                  <div class="counter__minus">-</div>
+                  <input type="text" class="counter__value" value="0" />
+                  <div class="counter__plus">+</div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="calc__divider"></div>
+
+      <div class="form form--vertical">
+        <div class="table-title">Дополнительные пожелания</div>
+        
+        <label class="checkbox-container">
+          <div class="checkbox">
+            <input type="checkbox" name="Нанесение_логотипа" value="Да">
+            <span></span>
+          </div>
+          <span class="checkbox-label">Нанесение логотипа</span>
+        </label>
+        <div class="input-div">
+          <textarea name="Прочее" id="" rows="3" class="input" placeholder="Прочее (введите текст)"></textarea>
+        </div>
+        <div class="form__title">Контактные данные для обратной связи</div>
+        <div class="form__content">
+
+          <div class="input-div">
+            <input type="text" class="input" name="name" placeholder="Ваше имя">
+          </div>
+
+          <div class="input-div">
+            <input type="tel" class="input" name="phone" placeholder="Номер телефона" required minlength="10">
+            <span class="error-message">Заполните это поле</span>
+          </div>
+
+          <div class="form__info">* Ваши данные в безопасности и не будут 
+              переданы третьим лицам</div>
+
+          <button class="button ajax-submit" type="submit" id="rass4itat_stoimost_poshiva">РАССЧИТАТЬ СТОИМОСТЬ ПОШИВА</button>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="remodal remodal--small" data-remodal-id="zvonok-modal" data-remodal-options="hashTracking: true">

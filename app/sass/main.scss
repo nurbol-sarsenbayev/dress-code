@@ -495,6 +495,11 @@
 .card {
   max-width: 340px;
   margin: 0 auto;
+  &:hover {
+    .card__hover {
+      display: flex;
+    }
+  }
   &__image {
     position: relative;
     border-radius: 22px;
@@ -515,7 +520,19 @@
     img {
       display: block;
       width: 100%;
-    }
+    }    
+  }
+
+  &__hover {
+    display: none;
+    position: absolute;
+    background-color: rgba(#fff, .5);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
   }
 
   &__title {
@@ -613,11 +630,12 @@
   justify-content: center;
   position: relative;
   margin: 0 auto;
-  padding: 4rem 0;
+  padding: 4rem 3rem 0;
   @include lg-block() {
     flex-direction: column;
     align-items: center;
     max-width: 650px;
+    padding: 4rem 3rem 3rem;
     &:before, &:after {
       display: none;
     }
@@ -666,8 +684,11 @@
   &__divider {
     width: 1px;
     height: 500px;
-    margin: auto 5rem;
+    margin: auto 50px;
     background-color: rgba(#000, 0.2);
+    @include xl-block() {
+      margin: 0 30px 0 0;      
+    };
     @include lg(display, none);
   }
 

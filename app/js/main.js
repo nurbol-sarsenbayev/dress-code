@@ -5,7 +5,7 @@ $(document).ready(function () {
   var $html = $("html, body");
   var $header = $(".header");
   var $menu = $(".main-menu");
-  var headerHeight = 99;
+  var headerHeight = 80;
   var $hamburger = $(".hamburger");
 
   // забираем utm из адресной строки и пишем в sessionStorage, чтобы отправить их на сервер при form submit
@@ -22,7 +22,7 @@ $(document).ready(function () {
   new WOW({ mobile: false }).init();
 
   if ($wnd.width() < 992) {
-    headerHeight = 89;
+    headerHeight = 80;
   }
 
   // jquery.maskedinput для ПК и планшет (мобильном не подключаем)
