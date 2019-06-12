@@ -176,7 +176,9 @@ $(document).ready(function () {
     }
   });
 
-
+  $('.katalog__type__title').click(function() {
+    $(this).toggleClass('active');
+  });
 
   $(".ajax-submit").click(function (e) {
     var $form = $(this).closest('form');

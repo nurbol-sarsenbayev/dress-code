@@ -1959,10 +1959,13 @@
         img {
           margin-left: 15px;
         }
+        &.active + .katalog__type__main {
+          display: block;
+        }
       }
       &__main {
         margin-bottom: 60px;
-        // display: none;
+        display: none;
         @include lg(margin-bottom, 30px);
       }
       .checkbox {
